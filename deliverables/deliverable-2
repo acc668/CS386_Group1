@@ -15,6 +15,8 @@ Q-Up gives **Competitive Players** reassurance that they will have PCs for games
 **Customer Segment:**  
 AML attendees, including **Competitive Players, Casual Players, and Advisors** who have differing spatial needs.
 
+![Deliverable Image 1](/mnt/data/extracted_images/page_1.png)
+
 ## 2. Stakeholders
 
 1. **Casual Gamer** - Not in E-Sports but wants a seamless experience at AML, ensuring they can game at the desired time.
@@ -23,6 +25,8 @@ AML attendees, including **Competitive Players, Casual Players, and Advisors** w
 4. **Group 1 Developers** - Responsible for designing maintainable and updatable code.
 5. **NAU IT Staff** - Ensures the application complies with university security standards.
 
+![Deliverable Image 2](/mnt/data/extracted_images/page_2.png)
+
 ## 3. Functional Requirements (Features)
 
 - Reserve a certain PC for a specific date and time
@@ -30,6 +34,8 @@ AML attendees, including **Competitive Players, Casual Players, and Advisors** w
 - Allow users to change or cancel reservations
 - Notify users that the end of the session is approaching
 - Enforce session time by closing the game
+
+![Deliverable Image 3](/mnt/data/extracted_images/page_3.png)
 
 ## 4. Non-functional Requirements
 
@@ -43,6 +49,8 @@ AML attendees, including **Competitive Players, Casual Players, and Advisors** w
    - Prevents scheduling confusion
    - **Measurement:** The app event calendar should always match the E-Sports event calendar
 
+![Deliverable Image 4](/mnt/data/extracted_images/page_4.png)
+
 ## 5. Minimum Viable Product (MVP)
 
 The MVP for **Q-Up** will include:
@@ -52,10 +60,14 @@ The MVP for **Q-Up** will include:
 - Basic admin controls
 - Automated notifications for confirmed bookings
 
+![Deliverable Image 5](/mnt/data/extracted_images/page_5.png)
+
 ### Validation Process
 - **Prototyping**: Low-fidelity wireframes in Figma/Adobe XD
 - **Pilot Testing**: Small group usability tests
 - **Wizard of Oz Testing**: Simulated advanced scheduling optimizations
+
+![Deliverable Image 6](/mnt/data/extracted_images/page_6.png)
 
 ## 6. Use Cases
 
@@ -75,21 +87,7 @@ The MVP for **Q-Up** will include:
   4. User receives second time warning
   5. Game is closed
 
-### **Anthony**: Make Reservation
-- **Actor:** Casual Gamer, E-Sports Member
-- **Trigger:** User decides to make a reservation
-- **Pre-conditions:**
-  - User is logged in
-  - PC is available
-- **Post-condition:**
-  - User gets reservation confirmation
-  - Time slot marked as reserved
-- **Success Scenario:**
-  1. User initiates the request
-  2. System confirms availability
-  3. User confirms request
-  4. Reservation is completed
-  5. Time slot marked as taken
+![Deliverable Image 7](/mnt/data/extracted_images/page_7.png)
 
 ## 7. User Stories
 
@@ -106,8 +104,11 @@ The MVP for **Q-Up** will include:
 | **Coach** | Wants to check PC availability for planning | 1 | 2sp |
 | **Casual Player** | Wants to see available PCs before arrival | 3 | 2sp |
 
+![Deliverable Image 8](/mnt/data/extracted_images/page_8.png)
+
 ## 8. Issue Tracker
 
 GitHub Issue Tracker Link: [GitHub Issues](https://github.com/acc668/CS386_Group1/issues)
 
 Screenshot of Issue Tracker:
+![Deliverable Image 9](/mnt/data/extracted_images/page_9.png)
