@@ -26,7 +26,7 @@
 - Created light-mode mockup for web site
 - Created dark-mode mockup for web site
 - Worked on Deliverable 2
-- **Github Activity:** Deliverable
+- **Github Activity:** Deliverable, Report
 
 **Clayton:**  
 - Did their portion on each worksheet
@@ -36,19 +36,19 @@
 **Vince:**  
 - Did their portion on each worksheet
 - Researched C++ frameworks for PC App
-- **Github Activity:** None
+- **Github Activity:** Deliverable
 
 **Anthony:**  
 - Created Requirements List and related modules
 - Initialized Task List
 - Did their portion on each worksheet
-- **Github Activity:** Requirements List
+- **Github Activity:** Requirements List, Deliverable, Report
 
 **Zack:**  
 - Created rough draft for the HTML based on the mockups
 - created Base CSS styling
 - Did their portion on each worksheet
-- **Github Activity:** None
+- **Github Activity:** Deliverable
 
 
 ---
