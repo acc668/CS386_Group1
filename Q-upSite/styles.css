@@ -1,0 +1,182 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #002454;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: 	#FAC01A;
+    padding: 10px 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 5px;
+}
+
+/* PC Availability Page */
+
+/* Fixed Grey Box (Only on PC Availability Page) */
+.pc-availability-page .fixed-box {
+    width: 700px;
+    height: 650px;
+    background-color: black;
+    position: absolute;
+    border-radius: 10px;
+    top: 10px;
+    left: 650px;
+    z-index: -1;
+}
+
+.pc-container {
+    padding: 50px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    overflow: hidden; /* Ensures no clipping */
+    width: fit-content;
+    position: absolute;
+    top: 150px;
+    left: 50px;
+}
+
+.pc-grid {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr); /* Fewer columns for vertical effect */
+    grid-template-rows: repeat(12, 45px); /* More rows for stacking */
+    gap: 0px;
+    position: center;
+}
+
+/* Diagonal positioning for vertical stacking */
+.pc:nth-child(1) { grid-column: 16; grid-row: 2; }
+.pc:nth-child(2) { grid-column: 13; grid-row: 3; }
+.pc:nth-child(3) { grid-column: 15; grid-row: 4; }
+.pc:nth-child(4) { grid-column: 12; grid-row: 5; }
+.pc:nth-child(5) { grid-column: 14; grid-row: 6; }
+.pc:nth-child(6) { grid-column: 11; grid-row: 7; }
+.pc:nth-child(7) { grid-column: 13; grid-row: 8; }
+.pc:nth-child(8) { grid-column: 10; grid-row: 9; }
+.pc:nth-child(9) { grid-column: 12; grid-row: 10; }
+.pc:nth-child(10) { grid-column: 9; grid-row: 11; }
+.pc:nth-child(11) { grid-column: 11; grid-row: 12; }
+.pc:nth-child(12) { grid-column: 14; grid-row: 1; }
+
+.pc {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: gray;
+}
+
+.pc.available {
+    background-color: rgb(98, 248, 5);
+}
+
+.pc.occupied {
+    background-color: red;
+}
+
+
+/* Schedule Page */
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    padding: 10px;
+}
+
+.grid-cell {
+    width: 60px;
+    height: 60px;
+    background-color: #F4B549;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+/* Event Calendar */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 50px;
+    padding: 50px;
+}
+
+/* FAQ Page */
+.faq-container {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.faq-item {
+    background-color: #F4B549;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+}
+
+.feedback-form {
+    margin-top: 20px;
+}
+
+.feedback-form input, .feedback-form textarea {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.feedback-form button {
+    display: block;
+    margin: auto;
+    background-color: #F4B549;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+}
+h2 {
+    text-align: center;   
+}
+h6 {
+    font-size: 32px;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 50%;  /* Moves it to the vertical center */
+    left: 12%; /* Moves it to the left side */
+    transform: translateY(-50%); /* Ensures perfect centering */
+}
