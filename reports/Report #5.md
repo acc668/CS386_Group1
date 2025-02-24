@@ -10,7 +10,7 @@
 - Anthony
 - Clayton
 - Vince
-- Zachary
+- Zackary
 
 ## Missing Participants
 - None
@@ -20,7 +20,7 @@
 - **Anthony** - Recorder
 - **Clayton** - Presenter
 - **Vince** - Recorder
-- **Zachary** - QA
+- **Zackary** - QA
 
 ---
 
@@ -35,7 +35,7 @@
 - Worked on Worksheet 5-2
 - Class Diagram for program
 
-### Zach
+### Zack
 - Updated and refined the project web-app look (HTML/CSS)
 - Worked on Worksheet 5-2
 
@@ -55,7 +55,7 @@
 
 1. **Appreciations:** Fast and efficient use of time during class.
 2. **Successes:** Completed both worksheets quickly this week.
-3. **Failures:** None come to mind.
+3. **Failures:** None comes to mind.
 4. **Barriers:** Had to change the approach to the coding since the original way was IDE-specific.
 5. **What we should try next time:** Get feedback on design ideas, continue coding for both front and back-end development.
 
@@ -72,7 +72,7 @@
 ### Anthony
 - Work on HTML and JavaScript.
 
-### Zach
+### Zack
 - Work on HTML and JavaScript.
 
 ### Alexandra
