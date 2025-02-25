@@ -15,8 +15,6 @@ Q-Up gives **Competitive Players** reassurance that they will have PCs for games
 **Customer Segment:**  
 AML attendees, including **Competitive Players, Casual Players, and Advisors** who have differing spatial needs.
 
-![Deliverable Image 1](/mnt/data/extracted_images/page_1.png)
-
 ## 2. Stakeholders
 
 1. **Casual Gamer** - Not in E-Sports but wants a seamless experience at AML, ensuring they can game at the desired time.
@@ -25,8 +23,6 @@ AML attendees, including **Competitive Players, Casual Players, and Advisors** w
 4. **Group 1 Developers** - Responsible for designing maintainable and updatable code.
 5. **NAU IT Staff** - Ensures the application complies with university security standards.
 
-![Deliverable Image 2](/mnt/data/extracted_images/page_2.png)
-
 ## 3. Functional Requirements (Features)
 
 - Reserve a certain PC for a specific date and time
@@ -34,8 +30,6 @@ AML attendees, including **Competitive Players, Casual Players, and Advisors** w
 - Allow users to change or cancel reservations
 - Notify users that the end of the session is approaching
 - Enforce session time by closing the game
-
-![Deliverable Image 3](/mnt/data/extracted_images/page_3.png)
 
 ## 4. Non-functional Requirements
 
@@ -71,6 +65,8 @@ The MVP for **Q-Up** will include:
 
 ## 6. Use Cases
 
+![UML Diagram](/deliverables/images/UMLDiagram.png)
+
 ### **Ali**: Get notified when time on PC ends
 - **Actor:** Casual Gamer
 - **Trigger:** Reservation time runs out
@@ -87,7 +83,77 @@ The MVP for **Q-Up** will include:
   4. User receives second time warning
   5. Game is closed
 
-![Deliverable Image 7](/mnt/data/extracted_images/page_7.png)
+![Game Schedule](/deliverables/images/Ali.png)
+
+### **Anthony**: Make Reservation  
+- **Actor:** Casual Gamer, E-Sports Member  
+- **Trigger:** User decides to make a reservation  
+- **Pre-conditions:**  
+  - User is logged in  
+  - PC is available at requested time  
+- **Post-condition:**  
+  - User gets reservation confirmation  
+  - Time slot is marked as reserved  
+- **Success Scenario:**  
+  1. User initiates the reservation request.  
+  2. Reservation module confirms availability.  
+  3. User confirms request.  
+  4. The Reservation Module completes reservation.  
+  5. Time slot is marked as taken. 
+
+![Schedule](/deliverables/images/Anthony.png)
+
+### **Clayton**: Update E-Sports Calendar  
+- **Actor:** AML Staff  
+- **Trigger:** Staff decides to add a new event to the calendar  
+- **Pre-conditions:**  
+  - Staff member must be logged in  
+  - Staff member selects the event date  
+- **Post-condition:**  
+  - Event is added to the calendar  
+  - Calendar is updated to display new addition  
+- **Success Scenario:**  
+  1. Staff member decides to add a new event to the calendar.  
+  2. Staff member logs in.  
+  3. Staff member selects date.  
+  4. Staff member adds event to the calendar.  
+  5. Calendar module updates calendar.
+
+![Game Schedule](/deliverables/images/Clayton.png)
+
+### **Vince**: Cancel/Change Reservation  
+- **Actor:** Casual Gamer, E-Sports Member  
+- **Trigger:** User decides to change the date and/or time of reservation  
+- **Pre-conditions:**  
+  - User must be logged in  
+  - User must have chosen the reservation in question  
+- **Post-condition:**  
+  - Time/date for reservation is updated to the new time/date  
+- **Success Scenario:**  
+  1. User decides to change a reservation’s time/date.  
+  2. User logs in.  
+  3. User chooses the reservation in question.  
+  4. User changes reservation time/date.  
+  5. User confirms new info.  
+  6. Calendar module updates the calendar.
+
+![Reservation Schedule](/deliverables/images/Vince.png)
+
+### **Zackary**: Access Reservation Schedule  
+- **Actor:** Casual Gamers, E-Sports Members, Spectators, Staff  
+- **Trigger:** User decides to look at the reservation schedule  
+- **Pre-conditions:**  
+  - User opens the app  
+  - User navigates to the calendar  
+- **Post-condition:**  
+  - User sees up-to-date reservation information  
+- **Success Scenario:**  
+  1. User decides to view the reservation schedule.  
+  2. User opens the app.  
+  3. User navigates to the calendar.  
+  4. User sees up-to-date calendar information.
+
+![Reservation Access](/deliverables/images/Zackary.png)
 
 ## 7. User Stories
 
@@ -104,11 +170,9 @@ The MVP for **Q-Up** will include:
 | **Coach** | Wants to check PC availability for planning | 1 | 2sp |
 | **Casual Player** | Wants to see available PCs before arrival | 3 | 2sp |
 
-![Deliverable Image 8](/mnt/data/extracted_images/page_8.png)
-
 ## 8. Issue Tracker
 
 GitHub Issue Tracker Link: [GitHub Issues](https://github.com/acc668/CS386_Group1/issues)
 
 Screenshot of Issue Tracker:
-![Deliverable Image 9](/mnt/data/extracted_images/page_9.png)
+![Issue Tracker](/deliverables/images/IssueTracker.png)
