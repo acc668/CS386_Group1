@@ -43,8 +43,6 @@ AML attendees, including **Competitive Players, Casual Players, and Advisors** w
    - Prevents scheduling confusion
    - **Measurement:** The app event calendar should always match the E-Sports event calendar
 
-![Deliverable Image 4](/mnt/data/extracted_images/page_4.png)
-
 ## 5. Minimum Viable Product (MVP)
 
 The MVP for **Q-Up** will include:
@@ -54,14 +52,10 @@ The MVP for **Q-Up** will include:
 - Basic admin controls
 - Automated notifications for confirmed bookings
 
-![Deliverable Image 5](/mnt/data/extracted_images/page_5.png)
-
 ### Validation Process
 - **Prototyping**: Low-fidelity wireframes in Figma/Adobe XD
 - **Pilot Testing**: Small group usability tests
 - **Wizard of Oz Testing**: Simulated advanced scheduling optimizations
-
-![Deliverable Image 6](/mnt/data/extracted_images/page_6.png)
 
 ## 6. Use Cases
 
