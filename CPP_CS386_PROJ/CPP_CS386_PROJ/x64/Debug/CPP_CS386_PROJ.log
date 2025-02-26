@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Users\nfgau\OneDrive\Documents\CPP_CS386_PROJ\CPP_CS386_PROJ\main.cpp(57,34): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+C:\Users\nfgau\OneDrive\Documents\CPP_CS386_PROJ\CPP_CS386_PROJ\main.cpp(57,27): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+  CPP_CS386_PROJ.vcxproj -> C:\Users\nfgau\OneDrive\Documents\CPP_CS386_PROJ\x64\Debug\CPP_CS386_PROJ.exe
