@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Availability & Schedule</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="pc-availability-page">
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="availability-schedule.html">Availability & Schedule</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="faq.html">FAQ</a>
+    </nav>
+
+    <section class="availability-schedule-container">
+        <!-- Schedule Section on the Left -->
+        <div class="schedule-section">
+            <h2>Schedule----------------------------------------------------------------------Availability</h2>
+            <div class="calendar">
+                <!-- Calendar grid here -->
+            </div>
+            <form>
+                <div class="form-container">
+                    <form>
+                        <h6>
+                        <label>Start Time</label>
+                        <input type="time">
+                        <br>
+                        <label>End Time</label>
+                        <input type="time">
+                        <br>
+                        <label>PC#</label>
+                        <input type="number">
+                        <button type="submit">Submit</button>
+                        <br>
+                        </h6>
+                    </form>
+                </div>
+            </form>
+        </div>
+        
+        <!-- PC Availability Section on the Right -->
+        <div class="pc-container">
+            
+            <div class="pc-grid">
+                <div class="pc available"></div>
+                <div class="pc occupied"></div>
+                <div class="pc available"></div>
+                <div class="pc occupied"></div>
+                <div class="pc available"></div>
+                <div class="pc occupied"></div>
+                <div class="pc available"></div>
+                <div class="pc occupied"></div>
+                <div class="pc available"></div>
+                <div class="pc occupied"></div>
+                <div class="pc available"></div>
+                <div class="pc occupied"></div>
+            </div>
+            <div class="fixed-box"></div> <!-- Grey box inside availability page -->
+        </div>
+    </section>
+</body>
+</html>
