@@ -32,13 +32,13 @@
 - Worked on Worksheet 5-3
 - Worked on Worksheet 5-4
 - Began the slides for Midterm Presentation
-- Began Deliverable 3
+- Deliverable 3
 
 ### Anthony
 - Worked on Worksheet 5-3
 - Worked on Worksheet 5-4
 - Worked on back end code for the server prototype
-- 
+- Deliverable 3
 
 ### Zack
 - Updated and refined the project web-app look (HTML/CSS)
