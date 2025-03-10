@@ -1,9 +1,9 @@
-# Report for Week #6
+# Report #7
 
-**QueueUp (PC Schedular for Esports):**
+**QueueUp (PC Scheduler for Esports):**
 
 **Group:** Group 1  
-**Date:** 2/28/2025  
+**Date:** 03/07/2025  
 **Location:** AML, Communications Building  
 **Project repo:** [acc668/CS386_Group1](https://github.com/acc668/CS386_Group1)  
 
@@ -29,31 +29,35 @@
 ## 1. Activity Summary
 
 ### Alexandra
-- Worked on Worksheet 5-3
-- Worked on Worksheet 5-4
-- Began the slides for Midterm Presentation
-- Deliverable 3
+- Midterm Presentation
+- Worked on Worksheet 5-5
+- Deliverable 4
+- Report #7
+- 
 
 ### Anthony
-- Worked on Worksheet 5-3
-- Worked on Worksheet 5-4
-- Worked on back end code for the server prototype
-- Deliverable 3
+- Midterm Presentation
+- Worked on Worksheet 5-5
+- Deliverable 4
+- 
 
 ### Zack
-- Updated and refined the project web-app look (HTML/CSS)
-- Worked on Worksheet 5-3
-- Worked on Worksheet 5-4
-- Report #6
+- Midterm Presentation
+- Worked on Worksheet 5-5
+- Deliverable 4
+- 
 
 ### Vince
-- C++ Version for App development
-- Worked on Worksheet 5-3
-- Worked on Worksheet 5-4
+- Midterm Presentation
+- Worked on Worksheet 5-5
+- Deliverable 4
+- 
 
 ### Clayton
-- Worked on Worksheet 5-3
-- Worked on Worksheet 5-4
+- Midterm Presentation
+- Worked on Worksheet 5-5
+- Deliverable 4
+- 
 
 ---
 
