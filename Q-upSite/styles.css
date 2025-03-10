@@ -12,7 +12,7 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
-    background-color: 	#FAC01A;
+    background-color: #FAC01A;
     padding: 10px 20px;
 }
 
@@ -23,43 +23,109 @@ body {
     padding: 5px;
 }
 
-/* PC Availability Page */
+/* Balance Layout: Schedule on Left, PC Availability on Right */
+.availability-schedule-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
 
-/* Fixed Grey Box (Only on PC Availability Page) */
+/* Schedule & PC Titles - Separated */
+.schedule-section h2 {
+    position: absolute;
+    top: 25%; /* Adjusted to separate from PC title */
+    left: 30%; /* Aligns with the schedule section */
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* PC Availability Title */
+.pc-container h2 {
+    position: absolute;
+    top: -10%; /* Moves PC title lower to separate it */
+    left: 60%; /* Aligns with the PC section */
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Schedule Form - Shifted Left & Centered */
+.schedule-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    padding: 20px;
+    background-color: #FAC01A;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+}
+
+.schedule-form label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.schedule-form input, .schedule-form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+.schedule-form button {
+    background-color: #002454;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+/* Center PC Availability Box Around the Grid */
+.pc-container {
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 60%; /* Adjusted to balance with schedule form */
+    transform: translate(-50%, -50%);
+}
+
+/* Enlarged Fixed Grey Box (Covers Full PC Grid) */
 .pc-availability-page .fixed-box {
-    width: 700px;
-    height: 650px;
+    width: 650px; /* Increased width */
+    height: 600px; /* Increased height */
     background-color: black;
     position: absolute;
     border-radius: 10px;
-    top: 10px;
-    left: 650px;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
     z-index: -1;
 }
 
-.pc-container {
-    padding: 50px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    overflow: hidden; /* Ensures no clipping */
-    width: fit-content;
-    position: absolute;
-    top: 150px;
-    left: 50px;
-}
-
+/* PC Grid - Ensures Proper Placement */
 .pc-grid {
     display: grid;
-    grid-template-columns: repeat(15, 1fr); /* Fewer columns for vertical effect */
-    grid-template-rows: repeat(12, 45px); /* More rows for stacking */
+    grid-template-columns: repeat(15, 1fr);
+    grid-template-rows: repeat(12, 45px);
     gap: 0px;
-    position: center;
 }
 
-/* Diagonal positioning for vertical stacking */
+/* Individual PC Positioning (Diagonal Layout) */
 .pc:nth-child(1) { grid-column: 16; grid-row: 2; }
 .pc:nth-child(2) { grid-column: 13; grid-row: 3; }
 .pc:nth-child(3) { grid-column: 15; grid-row: 4; }
@@ -73,16 +139,20 @@ body {
 .pc:nth-child(11) { grid-column: 11; grid-row: 12; }
 .pc:nth-child(12) { grid-column: 14; grid-row: 1; }
 
+/* PC Box Styling */
 .pc {
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white; /* Ensures number contrast */
     border-radius: 5px;
     text-align: center;
     background-color: gray;
+    cursor: pointer;
 }
 
 .pc.available {
@@ -93,90 +163,36 @@ body {
     background-color: red;
 }
 
-
-/* Schedule Page */
-.calendar {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 5px;
-    padding: 10px;
-}
-
-.grid-cell {
-    width: 60px;
-    height: 60px;
-    background-color: #F4B549;
-    border: 1px solid white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 5px;
-}
-
-/* Event Calendar */
-.calendar-grid {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 50px;
-    padding: 50px;
-}
-
-/* FAQ Page */
-.faq-container {
-    width: 50%;
-    margin: 0 auto;
-    padding: 20px;
-}
-
+/* FAQ Section */
 .faq-item {
-    background-color: #F4B549;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    color: black;
     cursor: pointer;
-}
-
-.feedback-form {
-    margin-top: 20px;
-}
-
-.feedback-form input, .feedback-form textarea {
-    display: block;
-    width: 80%;
-    margin: 10px auto;
     padding: 10px;
+    background: #FAC01A;
     border-radius: 5px;
-    border: none;
+    margin-bottom: 5px;
 }
 
-.feedback-form button {
-    display: block;
-    margin: auto;
-    background-color: #F4B549;
+.faq-item:hover {
+    background: #e0a800;
+}
+
+.faq-feedback {
+    display: none;
+    margin-top: 10px;
+}
+
+.faq-feedback.visible {
+    display: block; /* Ensures the FAQ expands properly */
+}
+
+.feedback-list {
+    margin-top: 10px;
     padding: 10px;
-    border: none;
+    background: #FAC01A;
     border-radius: 5px;
-    font-weight: bold;
-    cursor: pointer;
 }
 
-h1 {
-    text-align: center;
-}
-h2 {
-    text-align: center;   
-}
-h6 {
-    font-size: 32px;
-}
-
-.form-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    position: absolute;
-    top: 50%;  /* Moves it to the vertical center */
-    left: 12%; /* Moves it to the left side */
-    transform: translateY(-50%); /* Ensures perfect centering */
+.feedback-entry {
+    padding: 5px;
+    border-bottom: 1px solid black;
 }

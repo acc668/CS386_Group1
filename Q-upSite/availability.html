@@ -3,38 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PC Availability</title>
+    <title>PC Availability & Schedule</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<body class="pc-availability-page"> <!-- Unique class for this page -->
-<body>
+<body class="pc-availability-page">
     <nav class="navbar">
         <a href="index.html">Home</a>
-        <a href="availability.html">Availability</a>
-        <a href="schedule.html">Schedule</a>
-        <a href="calendar.html">Event Calendar</a>
+        <a href="availability-schedule.html">Availability & Schedule</a>
+        <a href="calendar.html">Calendar</a>
         <a href="faq.html">FAQ</a>
     </nav>
 
-    <section id="availability" class="section">
-        <h1>PC Availability</h1>
-        <button class="schedule-btn">Schedule</button>
-        <div class="pc-availability-page">
-        <div class="pc-grid">
-            <div class="pc available"></div>
-            <div class="pc occupied"></div>
-            <div class="pc available"></div>
-            <div class="pc occupied"></div>
-            <div class="pc available"></div>
-            <div class="pc occupied"></div>
-            <div class="pc available"></div>
-            <div class="pc occupied"></div>
-            <div class="pc available"></div>
-            <div class="pc occupied"></div>
-            <div class="pc available"></div>
-            <div class="pc occupied"></div>
+    <section class="availability-schedule-container">
+        <!-- Schedule Section on the Left -->
+        <div class="schedule-section">
+            <h2>Schedule</h2>
+            <div class="calendar">
+                <!-- Calendar grid can go here if needed -->
+            </div>
+            <form class="schedule-form">
+                <label for="start-time">Start Time:</label>
+                <input type="time" id="start-time">
+
+                <label for="end-time">End Time:</label>
+                <input type="time" id="end-time">
+
+                <label for="pc-number">PC #:</label>
+                <input type="number" id="pc-number" min="1" max="12">
+
+                <button type="submit">Submit</button>
+            </form>
         </div>
+        
+        <!-- PC Availability Section on the Right -->
+        <div class="pc-container">
+            <h2>PC Availability</h2>
+            <div class="pc-grid">
+                <div class="pc available"></div>
+                <div class="pc occupied"></div>
+                <div class="pc available"></div>
+                <div class="pc occupied"></div>
+                <div class="pc available"></div>
+                <div class="pc occupied"></div>
+                <div class="pc available"></div>
+                <div class="pc occupied"></div>
+                <div class="pc available"></div>
+                <div class="pc occupied"></div>
+                <div class="pc available"></div>
+                <div class="pc occupied"></div>
+            </div>
+            <div class="fixed-box"></div> <!-- Grey box inside availability page -->
         </div>
     </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
