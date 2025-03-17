@@ -22,4 +22,4 @@ By providing a structured and reliable **Reservation System**, real-time ***PC A
 
 ### UML Class Diagram  
 
-![UML Diagram](/deliverables/images/classDiagram.png)
+![UML Diagram](/deliverables/images/Q-Up_Class_Diagram_Horizontal_1.png)
