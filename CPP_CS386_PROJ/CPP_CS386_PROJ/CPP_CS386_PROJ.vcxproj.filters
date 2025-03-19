@@ -19,6 +19,9 @@
     <Filter Include="source_files\imgui">
       <UniqueIdentifier>{ec45a233-74f7-4473-854c-7f021f14e425}</UniqueIdentifier>
     </Filter>
+    <Filter Include="header_files\additional_libs">
+      <UniqueIdentifier>{1e0c05b2-237e-4ccb-b71e-8412550357fe}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -74,5 +77,13 @@
     <ClInclude Include="libs\imgui\imstb_rectpack.h">
       <Filter>header_files\imgui</Filter>
     </ClInclude>
+    <ClInclude Include="functions.h">
+      <Filter>header_files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\..\Downloads\gaming-center.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>
