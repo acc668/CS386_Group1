@@ -2,7 +2,13 @@
 
 ## Project Overview
 
-*Provide a brief description of the project, its purpose, and main features.*
+Q-upSite is a web and C++ based project aimed at streamlining event management and PC scheduling. The system is divided into two main components:
+- **Q-upSite Web Application:** Built using JavaScript and Node.js to provide an interactive interface.
+- **C++ Core Module:** Handles complex backend processing and algorithmic operations.
+
+The project promotes an efficient, user-friendly system to enhance event planning, management, and communication.
+
+> For more details, explore individual folders and associated documentation.
 
 ## Table of Contents
 
