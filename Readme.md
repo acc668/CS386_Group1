@@ -76,20 +76,18 @@ The project promotes an efficient, user-friendly system to enhance event plannin
 
 This project is licensed under the **GPL-3.0 License**. See the [LICENSE](LICENSE) file for details.
 
-## Contact
+**Alexandra Curry:**  
+- Primary: [acc668@nau.edu](mailto:acc668@nau.edu)  
+- Secondary: [acurry2018@gmail.com](mailto:acurry2018@gmail.com)
 
-**Alexandra Curry:**
-Primary: acc668@nau.edu
-Secondary: acurry2018@gmail.com
+**Anthony Narvaez:**  
+- Primary: [aan266@nau.edu](mailto:aan266@nau.edu)
 
-**Anthony Narvaez:**
-Primary: aan266@nau.edu
+**Clayton Ramsey:**  
+- Primary: [car723@nau.edu](mailto:car723@nau.edu)
 
-**Clayton Ramsey:**
-Primary: car723@nau.edu
+**Vince Carrillo:**  
+- Primary: [vjc62@nau.edu](mailto:vjc62@nau.edu)
 
-**Vince Carrillo:**
-Primary: vjc62@nau.edu
-
-**Zackary Pond:**
-Primary: zdp35@nau.edu
+**Zackary Pond:**  
+- Primary: [zdp35@nau.edu](mailto:zdp35@nau.edu)
