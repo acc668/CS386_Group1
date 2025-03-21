@@ -36,18 +36,18 @@ The project promotes an efficient, user-friendly system to enhance event plannin
    
    cd CPP_CS386_PROJ/
    ```
-   ```bash
    For Linux:
+   ```bash
    sudo apt update
    sudo apt install g++
    ```
-   ```bash
    For Mac:
+   ```bash
    xcode-select --install
    ```
-   ```bash
    For Windows:
-   Install MinGW
+   ```bash
+   Install [MinGW](https://www.mingw-w64.org/downloads/) and ensure that `g++` is added to your system's PATH.
    ```
 
 ## Usage
