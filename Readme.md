@@ -62,7 +62,14 @@ The project promotes an efficient, user-friendly system to enhance event plannin
 
 ## Usage
 
-*Provide instructions and examples on how to use the project.*
+- Log into the user authentication page
+- Navigate to the PC Reservation page
+- Check PC Availability
+- Make a PC Reservation
+- Navigate to the Calendar page
+- Navigate to the FAQ page
+- Read Frequently Asked Questions
+- Submit Feedback
 
 ## Project Structure
 
