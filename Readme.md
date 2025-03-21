@@ -76,6 +76,8 @@ The project promotes an efficient, user-friendly system to enhance event plannin
 
 This project is licensed under the **GPL-3.0 License**. See the [LICENSE](LICENSE) file for details.
 
+## Contact
+
 **Alexandra Curry:**  
 - Primary: [acc668@nau.edu](mailto:acc668@nau.edu)  
 - Secondary: [acurry2018@gmail.com](mailto:acurry2018@gmail.com)
