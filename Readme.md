@@ -73,11 +73,11 @@ The project promotes an efficient, user-friendly system to enhance event plannin
 
 ## Contributing
 
-*Explain how others can contribute to the project.*
+For information on how to contribute, see the [CONTRIBUTING](CONTRIBUTING) file for details.
 
 ## License
 
-This project is licensed under the **GPL-3.0 License**. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
