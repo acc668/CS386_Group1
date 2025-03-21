@@ -1,4 +1,7 @@
-# CS386_Group1
+# Q-Up Scheduling Application
+
+## Version
+Current version: **1.0.0**
 
 ## Project Overview
 
