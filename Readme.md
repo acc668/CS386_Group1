@@ -35,21 +35,24 @@ The project promotes an efficient, user-friendly system to enhance event plannin
    ```bash
    cd Q-upSite/
    ```
-   Install necessary files:
+   Install Node.js and npm:
+   ```bash
    npm install
-   
+   ```
+   Navigate to the 'CPP_CS386_PROJ/' folder:
+   ```bash
    cd CPP_CS386_PROJ/
    ```
-   For Linux:
+   Install G++ for Linux:
    ```bash
    sudo apt update
    sudo apt install g++
    ```
-   For Mac:
+   Install G++ for Mac:
    ```bash
    xcode-select --install
    ```
-   For Windows:
+   Install G++ for Windows:
    ```bash
    Install [MinGW](https://www.mingw-w64.org/downloads/) and ensure that `g++` is added to your system's PATH.
    ```
