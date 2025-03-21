@@ -23,7 +23,26 @@
    ```bash
    cd CS386_Group1
    ```
-3. *List any dependencies and how to install them.*
+3. Set up dependencies
+   ```bash
+   cd Q-upSite/
+   npm install
+   
+   cd CPP_CS386_PROJ/
+   ```
+   ```bash
+   For Linux:
+   sudo apt update
+   sudo apt install g++
+   ```
+   ```bash
+   For Mac:
+   xcode-select --install
+   ```
+   ```bash
+   For Windows:
+   Install MinGW
+   ```
 
 ## Usage
 
