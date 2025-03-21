@@ -31,7 +31,7 @@ The project promotes an efficient, user-friendly system to enhance event plannin
    ```
 3. Set up dependencies:
 
-   Navigate to the Q-upSite folder:
+   Navigate to the 'Q-upSite' folder:
    ```bash
    cd Q-upSite/
    ```
@@ -39,7 +39,7 @@ The project promotes an efficient, user-friendly system to enhance event plannin
    ```bash
    npm install
    ```
-   Navigate to the 'CPP_CS386_PROJ/' folder:
+   Navigate to the 'CPP_CS386_PROJ' folder:
    ```bash
    cd CPP_CS386_PROJ/
    ```
