@@ -29,9 +29,13 @@ The project promotes an efficient, user-friendly system to enhance event plannin
    ```bash
    cd CS386_Group1
    ```
-3. Set up dependencies
+3. Set up dependencies:
+
+   Navigate to the Q-upSite folder:
    ```bash
    cd Q-upSite/
+   ```
+   Install necessary files:
    npm install
    
    cd CPP_CS386_PROJ/
