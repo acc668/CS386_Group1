@@ -78,4 +78,18 @@ This project is licensed under the **GPL-3.0 License**. See the [LICENSE](LICENS
 
 ## Contact
 
-*Provide contact information or links for further inquiries.*
+**Alexandra Curry:**
+Primary: acc668@nau.edu
+Secondary: acurry2018@gmail.com
+
+**Anthony Narvaez:**
+Primary: aan266@nau.edu
+
+**Clayton Ramsey:**
+Primary: car723@nau.edu
+
+**Vince Carrillo:**
+Primary: vjc62@nau.edu
+
+**Zackary Pond:**
+Primary: zdp35@nau.edu
