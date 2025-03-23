@@ -1,33 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create New Account</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Account</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .account-container {
+      max-width: 400px;
+      margin: 100px auto;
+      background: #FAC01A;
+      padding: 30px;
+      border-radius: 10px;
+      color: black;
+    }
+
+    .account-container input {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin: 15px 0;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .account-container button {
+      background-color: #002454;
+      color: white;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .back-link {
+      display: block;
+      margin-top: 20px;
+      text-align: center;
+      color: #002454;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Create a New Account</h1>
-    </header>
-    
-    <main>
-        <form action="submit_account.php" method="POST">
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-            
-            <label for="confirm-password">Confirm Password:</label>
-            <input type="password" id="confirm-password" name="confirm-password" required>
-            
-            <button type="submit">Create Account</button>
-        </form>
-    </main>
-    
-    <footer>
-        <p>&copy; 2025 YourWebsite. All rights reserved.</p>
-    </footer>
+  <div class="account-container">
+    <h2>Create Account</h2>
+    <form id="accountForm">
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <input type="password" id="confirm-password" placeholder="Confirm Password" required />
+      <button type="submit">Create Account</button>
+    </form>
+    <a href="index.html" class="back-link">← Back to Home</a>
+  </div>
+
+  <script>
+    document.getElementById("accountForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const confirmPassword = document.getElementById("confirm-password").value.trim();
+
+      if (password !== confirmPassword) {
+        alert("Passwords do not match.");
+        return;
+      }
+
+      localStorage.setItem("registeredEmail", email);
+      localStorage.setItem("registeredPassword", password);
+
+      alert("Account created! You can now log in from the reservation page.");
+      window.location.href = "index.html"; // Redirect to main page after account creation
+    });
+  </script>
 </body>
 </html>
