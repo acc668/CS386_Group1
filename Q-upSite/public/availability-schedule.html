@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Availability & Schedule</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="pc-availability-page">
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="availability-schedule.html">Availability & Schedule</a>
+        <a href="calendar.html">Calendar</a>
+        <a href="faq.html">FAQ</a>
+    </nav>
+
+    <section class="availability-schedule-container">
+        <!-- Schedule Section (Left Side) -->
+        <div class="schedule-section">
+            <h2>Schedule</h2>
+            <form class="schedule-form">
+                <label for="start-time">Start Time:</label>
+                <input type="time" id="start-time">
+
+                <label for="end-time">End Time:</label>
+                <input type="time" id="end-time">
+
+                <label for="pc-number">PC #:</label>
+                <input type="number" id="pc-number" min="1" max="12">
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        
+        <!-- PC Availability Section (Right Side) -->
+        <div class="pc-container">
+            <h2>PC Availability</h2>
+            <div class="pc-grid">
+                <div class="pc available">1</div>
+                <div class="pc occupied">8</div>
+                <div class="pc available">2</div>
+                <div class="pc occupied">9</div>
+                <div class="pc available">3</div>
+                <div class="pc occupied">10</div>
+                <div class="pc available">4</div>
+                <div class="pc occupied">11</div>
+                <div class="pc available">5</div>
+                <div class="pc occupied">12</div>
+                <div class="pc available">6</div>
+                <div class="pc occupied">7</div>
+            </div>
+            
+            <div class="fixed-box"></div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
