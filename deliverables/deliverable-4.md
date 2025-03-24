@@ -66,9 +66,10 @@ List of implemented requirements and corresponding pull requests:
 ## Deployment
 - **Link to production system:** [Q-Up Live System](<insert production link here>)  
 - **Deployment Details:**
-    - Hosted on <insert whereever here> using Docker containers.
-    - CI/CD pipeline configured with GitHub Actions for continuous integration.
-    - Production environment monitored using AWS CloudWatch.
+    - Hosted on **Azure** using Azure App Services for easy deployment and scaling.
+    - Continuous Integration and Continuous Deployment (CI/CD) pipeline set up with **GitHub Actions** for automatic testing and deployment to Azure.
+    - **Azure SQL Database** is used for the MySQL database to handle reservations and user data.
+    - **Azure Monitor** is configured for real-time performance monitoring and logging of the system in production.
 
 ---
 
