@@ -104,36 +104,39 @@ document.addEventListener("DOMContentLoaded", function () {
     const loginSubmit = document.getElementById("loginSubmit");
     const loginError = document.getElementById("loginError");
 
+    let formPendingSubmission = false;
+
     if (scheduleForm) {
         scheduleForm.addEventListener("submit", function (e) {
             e.preventDefault();
             formPendingSubmission = true;
-            loginModal.style.display = "block";
+            loginModal.style.display = "block"; // 👈 shows modal
         });
     }
 
     if (loginSubmit) {
         loginSubmit.addEventListener("click", function () {
-            const username = document.getElementById("loginUsername").value.trim();
-            const password = document.getElementById("loginPassword").value.trim();
+            const email = document.getElementById("loginUsername").value;
+            const password = document.getElementById("loginPassword").value;
 
-            if (validUsers[username] && validUsers[username] === password) {
+            const storedEmail = localStorage.getItem("registeredEmail");
+            const storedPassword = localStorage.getItem("registeredPassword");
+
+            if (email === storedEmail && password === storedPassword) {
                 loginError.style.display = "none";
                 loginModal.style.display = "none";
 
                 if (formPendingSubmission) {
                     const pcNum = parseInt(document.getElementById("pc-number").value);
                     const pcBoxes = document.querySelectorAll(".pc");
+                    const selected = pcBoxes[pcNum - 1];
 
-                    if (pcNum >= 1 && pcNum <= pcBoxes.length) {
-                        const selected = pcBoxes[pcNum - 1];
+                    if (selected) {
                         selected.classList.remove("available");
                         selected.classList.add("occupied");
-                        alert(`PC ${pcNum} reserved successfully.`);
-                    } else {
-                        alert("Invalid PC number.");
                     }
 
+                    alert(`PC ${pcNum} reserved successfully.`);
                     formPendingSubmission = false;
                     scheduleForm.reset();
                 }
@@ -143,7 +146,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Close modal when clicking outside
     window.addEventListener("click", function (e) {
         if (e.target === loginModal) {
             loginModal.style.display = "none";
