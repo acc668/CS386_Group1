@@ -51,15 +51,35 @@ List of implemented requirements and corresponding pull requests:
 
 ## Technology
 ### Adopted Technologies:
-- **Express JS:** Backend framework for handling HTTP requests efficiently.
-- **Node JS:** JavaScript runtime for backend processing.
-- **QT:** Framework for building cross-platform desktop applications.
-- **BCrypt:** Secure hashing for user passwords.
-- **Express Session:** Session management for authentication.
-- **Passport:** Authentication middleware for Node.js.
-- **MySQL:** Relational database for storing reservation and user data.
-- **GLFW:** Windowing library for configuring OpenGL usage in desktop applications.
-- **Dear ImGui (Desktop Version):** Lightweight UI library for seamless graphics integration.
+- **Express JS**  
+  Express JS is a backend web application framework for handling HTTP requests and responses, as well as managing data, which is crucial for our system's functionality.
+
+- **Node JS**  
+  Node JS is an open-source, cross-platform runtime environment for executing JavaScript code server-side.
+
+- **QT**  
+  QT is a declarative UI specification language through QML (QT Meta Language), used for building powerful user interfaces in desktop applications.
+
+- **BCrypt**  
+  A simple password hashing library used for securing passwords stored in the database.
+
+- **Express Session**  
+  Express Session is a middleware that acts as a bridge between the database and the web application, enabling session management for user authentication.
+
+- **Passport**  
+  Passport is an authentication middleware used in Node.js to simplify login and user authentication.
+
+- **MySQL**  
+  MySQL is an open-source relational database management system used for storing reservation and user data.
+
+- **GLFW**  
+  GLFW is a windowing library for configuring the usage of the OpenGL graphics API within desktop applications.
+
+- **Dear ImGui (Desktop Version)**  
+  ImGui is a graphics UI library for desktop applications using C++. It was chosen for its open-source nature and minimal bloat, making it a lightweight solution for building interactive interfaces.
+
+- **Microsoft Azure**  
+  Azure is a cloud computing platform used for building, deploying, and managing applications and services. We’re using it to host our website and manage cloud-based resources for the application.
 
 ---
 
