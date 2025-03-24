@@ -1,4 +1,6 @@
 ﻿  main.cpp
-C:\Users\nfgau\OneDrive\Documents\CPP_CS386_PROJ\CPP_CS386_PROJ\main.cpp(60,34): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
-C:\Users\nfgau\OneDrive\Documents\CPP_CS386_PROJ\CPP_CS386_PROJ\main.cpp(60,27): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+C:\Users\nfgau\OneDrive\Documents\CPP_CS386_PROJ\CPP_CS386_PROJ\main.cpp(57,34): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+C:\Users\nfgau\OneDrive\Documents\CPP_CS386_PROJ\CPP_CS386_PROJ\main.cpp(57,27): warning C4305: 'argument': truncation from 'double' to 'GLclampf'
+  LINK : C:\Users\nfgau\OneDrive\Documents\CPP_CS386_PROJ\x64\Debug\CPP_CS386_PROJ.exe not found or not built by the last incremental link; performing full link
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
   CPP_CS386_PROJ.vcxproj -> C:\Users\nfgau\OneDrive\Documents\CPP_CS386_PROJ\x64\Debug\CPP_CS386_PROJ.exe

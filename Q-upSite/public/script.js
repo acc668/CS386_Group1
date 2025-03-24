@@ -63,3 +63,90 @@ document.addEventListener("DOMContentLoaded", function () {
         alert(`Event '${name}' added on ${date}`);
     });
 });
+
+const storedEmail = localStorage.getItem("registeredEmail");
+const storedPassword = localStorage.getItem("registeredPassword");
+
+loginSubmit.addEventListener("click", function () {
+    const enteredEmail = document.getElementById("loginUsername").value.trim();
+    const enteredPassword = document.getElementById("loginPassword").value.trim();
+
+    if (enteredEmail === storedEmail && enteredPassword === storedPassword) {
+        loginError.style.display = "none";
+        loginModal.style.display = "none";
+
+        if (formPendingSubmission) {
+            const pcNum = parseInt(document.getElementById("pc-number").value);
+            const pcBoxes = document.querySelectorAll(".pc");
+
+            if (pcNum >= 1 && pcNum <= pcBoxes.length) {
+                const selected = pcBoxes[pcNum - 1];
+                selected.classList.remove("available");
+                selected.classList.add("occupied");
+                alert(`PC ${pcNum} reserved successfully.`);
+            }
+
+            formPendingSubmission = false;
+            scheduleForm.reset();
+        }
+    } else {
+        loginError.style.display = "block";
+        loginError.textContent = "Invalid email or password.";
+    }
+});
+
+
+let formPendingSubmission = false;
+
+document.addEventListener("DOMContentLoaded", function () {
+    const scheduleForm = document.querySelector(".schedule-form");
+    const loginModal = document.getElementById("loginModal");
+    const loginSubmit = document.getElementById("loginSubmit");
+    const loginError = document.getElementById("loginError");
+
+    if (scheduleForm) {
+        scheduleForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            formPendingSubmission = true;
+            loginModal.style.display = "block";
+        });
+    }
+
+    if (loginSubmit) {
+        loginSubmit.addEventListener("click", function () {
+            const username = document.getElementById("loginUsername").value.trim();
+            const password = document.getElementById("loginPassword").value.trim();
+
+            if (validUsers[username] && validUsers[username] === password) {
+                loginError.style.display = "none";
+                loginModal.style.display = "none";
+
+                if (formPendingSubmission) {
+                    const pcNum = parseInt(document.getElementById("pc-number").value);
+                    const pcBoxes = document.querySelectorAll(".pc");
+
+                    if (pcNum >= 1 && pcNum <= pcBoxes.length) {
+                        const selected = pcBoxes[pcNum - 1];
+                        selected.classList.remove("available");
+                        selected.classList.add("occupied");
+                        alert(`PC ${pcNum} reserved successfully.`);
+                    } else {
+                        alert("Invalid PC number.");
+                    }
+
+                    formPendingSubmission = false;
+                    scheduleForm.reset();
+                }
+            } else {
+                loginError.style.display = "block";
+            }
+        });
+    }
+
+    // Close modal when clicking outside
+    window.addEventListener("click", function (e) {
+        if (e.target === loginModal) {
+            loginModal.style.display = "none";
+        }
+    });
+});
