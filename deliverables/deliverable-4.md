@@ -64,7 +64,7 @@ List of implemented requirements and corresponding pull requests:
 ---
 
 ## Deployment
-- **Link to production system:** [Q-Up Live System](<insert production link here>)  
+- **Link to production system:** [Q-Up Live System](https://aan266.z13.web.core.windows.net/)
 - **Deployment Details:**
     - Hosted on **Azure** using Azure App Services for easy deployment and scaling.
     - Continuous Integration and Continuous Deployment (CI/CD) pipeline set up with **GitHub Actions** for automatic testing and deployment to Azure.
