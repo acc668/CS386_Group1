@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -38,7 +38,8 @@
 
         <!-- PC Availability Section -->
         <div class="pc-container">
-            <h2>PC Availability</h2>
+            <h2 class="pc-title">PC Availability</h2>
+            <div class="fixed-box"></div> <!-- Background box stays behind -->
             <div class="pc-grid">
                 <div class="pc available">1</div>
                 <div class="pc available">2</div>
@@ -63,7 +64,7 @@
             <h2>Login Required</h2>
             <input type="text" id="loginUsername" placeholder="Username" />
             <input type="password" id="loginPassword" placeholder="Password" />
-            <button id="loginSubmit">Login</button>
+            <button id="loginSubmit">Reserve</button>
             <p id="loginError" style="color: red; display: none;">Invalid credentials</p>
         </div>
     </div>
