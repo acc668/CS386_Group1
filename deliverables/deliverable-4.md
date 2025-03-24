@@ -12,40 +12,40 @@ List of implemented requirements and corresponding pull requests:
 
 ### Frontend
 - **Requirement:** User authentication  
-  **Issue:** [#1 - User Authentication](<link to issue>)  
-  **Pull request:** [#12 - Implement Authentication](https://github.com/acc668/CS386_Group1/pull/12)  
-  **Implemented by:** Alice Johnson  
-  **Approved by:** Bob Smith  
-  **Print screen:** ![Authentication Screenshot](<insert image link>)
+  **Issue:** [#13 - User Authentication](https://github.com/acc668/CS386_Group1/issues/13)
+  **Pull request:** [#73 - Implement Authentication](https://github.com/acc668/CS386_Group1/pull/12](https://github.com/acc668/CS386_Group1/pull/73 )  
+  **Implemented by:** Clayton Ramsey
+  **Approved by:** Anthony Narvaez
+  **Print screen:** ![User Authentication](deliverables/images/userAuthentication.png)
 
 - **Requirement:** Real-time availability display  
-  **Issue:** [#2 - Real-time Display](<link to issue>)  
-  **Pull request:** [#15 - Availability Display](https://github.com/acc668/CS386_Group1/pull/15)  
-  **Implemented by:** Charlie Brown  
-  **Approved by:** Alice Johnson  
-  **Print screen:** ![Availability Display Screenshot](<insert image link>)
+  **Issue:** [#15 - Real-time Display](https://github.com/acc668/CS386_Group1/issues/15)  
+  **Pull request:** [#83 - Availability Display](https://github.com/acc668/CS386_Group1/pull/89) 
+  **Implemented by:** Zackary Pond
+  **Approved by:** Vince Carrillo
+  **Print screen:** ![Availability Display](deliverables/images/availabilityDisplay.png)
 
 - **Requirement:** Basic admin controls  
   **Issue:** [#3 - Admin Controls](<link to issue>)  
   **Pull request:** [#18 - Admin Panel](https://github.com/acc668/CS386_Group1/pull/18)  
-  **Implemented by:** Bob Smith  
-  **Approved by:** Charlie Brown  
+  **Implemented by:** 
+  **Approved by:**  
   **Print screen:** ![Admin Controls Screenshot](<insert image link>)
 
 ### Backend
 - **Requirement:** PC reservation system  
-  **Issue:** [#4 - PC Reservation](<link to issue>)  
-  **Pull request:** [#21 - Reservation System](https://github.com/acc668/CS386_Group1/pull/21)  
-  **Implemented by:** Daniel Lee  
-  **Approved by:** Alice Johnson  
-  **Print screen:** ![Reservation System Screenshot](<insert image link>)
+  **Issue:** [#17 - PC Reservation](https://github.com/acc668/CS386_Group1/issues/17)  
+  **Pull request:** [#92 - Reservation System](https://github.com/acc668/CS386_Group1/pull/92)
+  **Implemented by:** Anthony Narvaez
+  **Approved by:** Alexandra Curry
+  **Print screen:** ![PC Reservation](deliverables/images/pcReservation.png)
 
-- **Requirement:** Automated notifications  
-  **Issue:** [#5 - Notifications](<link to issue>)  
-  **Pull request:** [#23 - Notifications System](https://github.com/acc668/CS386_Group1/pull/23)  
-  **Implemented by:** Ethan White  
-  **Approved by:** Bob Smith  
-  **Print screen:** ![Notifications Screenshot](<insert image link>)
+- **Requirement:** Automated End-of-reservation notification 
+  **Issue:** [#9 - Notifications](https://github.com/acc668/CS386_Group1/issues/9)
+  **Pull request:** [#56 - Notifications System](https://github.com/acc668/CS386_Group1/pull/56)
+  **Implemented by:** Vince Carrillo
+  **Approved by:** Alexandra Curry
+  **Print screen:** ![Automated Notification](deliverables/images/automatedNotification.png)
 
 ---
 
