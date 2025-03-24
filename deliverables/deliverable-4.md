@@ -49,17 +49,6 @@ List of implemented requirements and corresponding pull requests:
 
 ---
 
-## Tests
-- **Test framework used:** Jest for frontend and Mocha/Chai for backend  
-- **GitHub folder:** [Automated Tests Folder](https://github.com/acc668/CS386_Group1/tree/main/tests)  
-- **Example Test Case:**
-    - **Class being tested:** [PCReservation.js](https://github.com/acc668/CS386_Group1/blob/main/backend/PCReservation.js)  
-    - **Test file:** [PCReservation.test.js](https://github.com/acc668/CS386_Group1/blob/main/tests/PCReservation.test.js)  
-    - **Print screen of test results:**  
-    ![Test Results](<insert image link>)
-
----
-
 ## Technology
 ### Adopted Technologies:
 - **Express JS:** Backend framework for handling HTTP requests efficiently.
@@ -77,7 +66,7 @@ List of implemented requirements and corresponding pull requests:
 ## Deployment
 - **Link to production system:** [Q-Up Live System](<insert production link here>)  
 - **Deployment Details:**
-    - Hosted on AWS using Docker containers.
+    - Hosted on <insert whereever here> using Docker containers.
     - CI/CD pipeline configured with GitHub Actions for continuous integration.
     - Production environment monitored using AWS CloudWatch.
 
