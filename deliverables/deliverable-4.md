@@ -49,6 +49,11 @@ List of implemented requirements and corresponding pull requests:
 
 ---
 
+## Tests  
+We attempted to implement automated tests to verify the correct functionality of our code. However, we encountered challenges with setting up automated tests for our website. As a result, we decided to focus our efforts on other aspects of the project. We plan to revisit automated testing in future iterations to ensure comprehensive testing of the system's core components.
+
+---
+
 ## Technology
 ### Adopted Technologies:
 - **Express JS**  
