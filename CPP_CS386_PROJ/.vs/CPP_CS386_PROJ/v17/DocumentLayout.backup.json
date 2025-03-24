@@ -5,6 +5,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{A418461D-1E3A-4F0F-8B7C-3FAA07BAD4B6}|CPP_CS386_PROJ\\CPP_CS386_PROJ.vcxproj|C:\\Users\\nfgau\\OneDrive\\Documents\\CPP_CS386_PROJ\\CPP_CS386_PROJ\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A418461D-1E3A-4F0F-8B7C-3FAA07BAD4B6}|CPP_CS386_PROJ\\CPP_CS386_PROJ.vcxproj|solutionrelative:CPP_CS386_PROJ\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A418461D-1E3A-4F0F-8B7C-3FAA07BAD4B6}|CPP_CS386_PROJ\\CPP_CS386_PROJ.vcxproj|C:\\Users\\nfgau\\OneDrive\\Documents\\CPP_CS386_PROJ\\CPP_CS386_PROJ\\functions.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A418461D-1E3A-4F0F-8B7C-3FAA07BAD4B6}|CPP_CS386_PROJ\\CPP_CS386_PROJ.vcxproj|solutionrelative:CPP_CS386_PROJ\\functions.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,8 +18,20 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "functions.h",
+              "DocumentMoniker": "C:\\Users\\nfgau\\OneDrive\\Documents\\CPP_CS386_PROJ\\CPP_CS386_PROJ\\functions.h",
+              "RelativeDocumentMoniker": "CPP_CS386_PROJ\\functions.h",
+              "ToolTip": "C:\\Users\\nfgau\\OneDrive\\Documents\\CPP_CS386_PROJ\\CPP_CS386_PROJ\\functions.h",
+              "RelativeToolTip": "CPP_CS386_PROJ\\functions.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-14T01:20:52.994Z"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -24,7 +40,7 @@
               "RelativeDocumentMoniker": "CPP_CS386_PROJ\\main.cpp",
               "ToolTip": "C:\\Users\\nfgau\\OneDrive\\Documents\\CPP_CS386_PROJ\\CPP_CS386_PROJ\\main.cpp",
               "RelativeToolTip": "CPP_CS386_PROJ\\main.cpp",
-              "ViewState": "AgIAABMAAAAAAAAAAAAAACAAAAAbAAAAAAAAAA==",
+              "ViewState": "AgIAADcAAAAAAAAAAAAAAJgAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-02-21T02:12:12.396Z",
               "EditorCaption": ""
