@@ -13,24 +13,17 @@ List of implemented requirements and corresponding pull requests:
 ### Frontend
 - **Requirement:** User authentication  
   **Issue:** [#13 - User Authentication](https://github.com/acc668/CS386_Group1/issues/13)
-  **Pull request:** [#73 - Implement Authentication](https://github.com/acc668/CS386_Group1/pull/12](https://github.com/acc668/CS386_Group1/pull/73 )  
+  **Pull request:** [#73 - Implement Authentication](https://github.com/acc668/CS386_Group1/pull/12](https://github.com/acc668/CS386_Group1/pull/73)  
   **Implemented by:** Clayton Ramsey
   **Approved by:** Anthony Narvaez
   **Print screen:** ![User Authentication](deliverables/images/userAuthentication.png)
 
 - **Requirement:** Real-time availability display  
   **Issue:** [#15 - Real-time Display](https://github.com/acc668/CS386_Group1/issues/15)  
-  **Pull request:** [#83 - Availability Display](https://github.com/acc668/CS386_Group1/pull/89) 
+  **Pull request:** [#89 - Availability Display](https://github.com/acc668/CS386_Group1/pull/89) 
   **Implemented by:** Zackary Pond
   **Approved by:** Vince Carrillo
   **Print screen:** ![Availability Display](deliverables/images/availabilityDisplay.png)
-
-- **Requirement:** Basic admin controls  
-  **Issue:** [#3 - Admin Controls](<link to issue>)  
-  **Pull request:** [#18 - Admin Panel](https://github.com/acc668/CS386_Group1/pull/18)  
-  **Implemented by:** 
-  **Approved by:**  
-  **Print screen:** ![Admin Controls Screenshot](<insert image link>)
 
 ### Backend
 - **Requirement:** PC reservation system  
@@ -114,10 +107,6 @@ We adopted the **MIT License** because it is a permissive license that allows br
 ## UX Design
 The user interface was designed to mirror the aesthetic of existing university websites, utilizing blue and yellow to provide a consistent experience. The system is intuitive and easy to navigate, ensuring users can quickly access available features. Below are some screenshots demonstrating the interface:
 
-- **Login Page:** ![Login Screenshot](<insert image link>)
-- **PC Availability Display:** ![Availability Screenshot](<insert image link>)
-- **Admin Control Panel:** ![Admin Panel Screenshot](<insert image link>)
-
 ---
 
 ## Lessons Learned
@@ -129,4 +118,4 @@ During this first release, the team learned the importance of maintaining clear 
 ---
 
 ## Demo
-**Video Link:** [Q-Up System Demo](<insert demo link here>)
+**Video Link:** [Q-Up System Demo](https://youtu.be/WsSoMz9_Xo0)
