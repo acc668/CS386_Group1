@@ -16,14 +16,14 @@ List of implemented requirements and corresponding pull requests:
   **Pull request:** [#73 - Implement Authentication](https://github.com/acc668/CS386_Group1/pull/73)  
   **Implemented by:** Clayton Ramsey
   **Approved by:** Anthony Narvaez
-  **Print screen:** ![User Authentication](./deliverables/images/userAuthentication.png)
+  **Print screen:** ![User Authentication](./images/userAuthentication.png)
 
 - **Requirement:** Real-time availability display  
   **Issue:** [#15 - Real-time Display](https://github.com/acc668/CS386_Group1/issues/15)  
   **Pull request:** [#89 - Availability Display](https://github.com/acc668/CS386_Group1/pull/89) 
   **Implemented by:** Zackary Pond
   **Approved by:** Vince Carrillo
-  **Print screen:** ![Availability Display](./deliverables/images/availabilityDisplay.png)
+  **Print screen:** ![Availability Display](./images/availabilityDisplay.png)
 
 ### Backend
 - **Requirement:** PC reservation system  
@@ -31,14 +31,14 @@ List of implemented requirements and corresponding pull requests:
   **Pull request:** [#92 - Reservation System](https://github.com/acc668/CS386_Group1/pull/92)
   **Implemented by:** Anthony Narvaez
   **Approved by:** Alexandra Curry
-  **Print screen:** ![PC Reservation](./deliverables/images/pcReservation.png)
+  **Print screen:** ![PC Reservation](./images/pcReservation.png)
 
 - **Requirement:** Automated End-of-reservation notification 
   **Issue:** [#9 - Notifications](https://github.com/acc668/CS386_Group1/issues/9)
   **Pull request:** [#56 - Notifications System](https://github.com/acc668/CS386_Group1/pull/56)
   **Implemented by:** Vince Carrillo
   **Approved by:** Alexandra Curry
-  **Print screen:** ![Automated Notification](./deliverables/images/automatedNotification.png)
+  **Print screen:** ![Automated Notification](./images/automatedNotification.png)
 
 ---
 
