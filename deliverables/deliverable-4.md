@@ -90,7 +90,7 @@ We adopted the **MIT License** because it is a permissive license that allows br
 ---
 
 ## UX Design
-The user interface was designed to mirror the aesthetic of existing university websites, utilizing blue and yellow to provide a consistent experience. The system is intuitive and easy to navigate, ensuring users can quickly access available features. Below are some screenshots demonstrating the interface:
+The user interface was designed to mirror the aesthetic of existing university websites, utilizing blue and yellow to provide a consistent experience. The system is intuitive and easy to navigate, ensuring users can quickly access available features.
 
 ---
 
