@@ -12,72 +12,57 @@ List of implemented requirements and corresponding pull requests:
 
 ### Frontend
 - **Requirement:** User authentication  
-  **Issue:** [#13 - User Authentication](https://github.com/acc668/CS386_Group1/issues/13)
-  **Pull request:** [#73 - Implement Authentication](https://github.com/acc668/CS386_Group1/pull/12](https://github.com/acc668/CS386_Group1/pull/73)  
-  **Implemented by:** Clayton Ramsey
-  **Approved by:** Anthony Narvaez
-  **Print screen:** ![User Authentication](deliverables/images/userAuthentication.png)
+  **Issue:** [#13 - User Authentication](https://github.com/acc668/CS386_Group1/issues/13)  
+  **Pull request:** [#73 - Implement Authentication](https://github.com/acc668/CS386_Group1/pull/73)  
+  **Implemented by:** Clayton Ramsey  
+  **Approved by:** Anthony Narvaez  
+  **Print screen:**  
+  ![User Authentication](./images/userAuthentication.png)
 
 - **Requirement:** Real-time availability display  
   **Issue:** [#15 - Real-time Display](https://github.com/acc668/CS386_Group1/issues/15)  
-  **Pull request:** [#89 - Availability Display](https://github.com/acc668/CS386_Group1/pull/89) 
-  **Implemented by:** Zackary Pond
-  **Approved by:** Vince Carrillo
-  **Print screen:** ![Availability Display](deliverables/images/availabilityDisplay.png)
+  **Pull request:** [#89 - Availability Display](https://github.com/acc668/CS386_Group1/pull/89)  
+  **Implemented by:** Zackary Pond  
+  **Approved by:** Vince Carrillo  
+  **Print screen:**  
+  ![Availability Display](./images/availabilityDisplay.png)
 
 ### Backend
 - **Requirement:** PC reservation system  
   **Issue:** [#17 - PC Reservation](https://github.com/acc668/CS386_Group1/issues/17)  
-  **Pull request:** [#92 - Reservation System](https://github.com/acc668/CS386_Group1/pull/92)
-  **Implemented by:** Anthony Narvaez
-  **Approved by:** Alexandra Curry
-  **Print screen:** ![PC Reservation](deliverables/images/pcReservation.png)
+  **Pull request:** [#92 - Reservation System](https://github.com/acc668/CS386_Group1/pull/92)  
+  **Implemented by:** Anthony Narvaez  
+  **Approved by:** Alexandra Curry  
+  **Print screen:**  
+  ![PC Reservation](./images/pcReservation.png)
 
-- **Requirement:** Automated End-of-reservation notification 
-  **Issue:** [#9 - Notifications](https://github.com/acc668/CS386_Group1/issues/9)
-  **Pull request:** [#56 - Notifications System](https://github.com/acc668/CS386_Group1/pull/56)
-  **Implemented by:** Vince Carrillo
-  **Approved by:** Alexandra Curry
-  **Print screen:** ![Automated Notification](deliverables/images/automatedNotification.png)
+- **Requirement:** Automated End-of-reservation notification  
+  **Issue:** [#9 - Notifications](https://github.com/acc668/CS386_Group1/issues/9)  
+  **Pull request:** [#56 - Notifications System](https://github.com/acc668/CS386_Group1/pull/56)  
+  **Implemented by:** Vince Carrillo  
+  **Approved by:** Alexandra Curry  
+  **Print screen:**  
+  ![Automated Notification](./images/automatedNotification.png)
 
 ---
 
-## Tests  
+## Tests
 We attempted to implement automated tests to verify the correct functionality of our code. However, we encountered challenges with setting up automated tests for our website. As a result, we decided to focus our efforts on other aspects of the project. We plan to revisit automated testing in future iterations to ensure comprehensive testing of the system's core components.
 
 ---
 
 ## Technology
-### Adopted Technologies:
-- **Express JS**  
-  Express JS is a backend web application framework for handling HTTP requests and responses, as well as managing data, which is crucial for our system's functionality.
-
-- **Node JS**  
-  Node JS is an open-source, cross-platform runtime environment for executing JavaScript code server-side.
-
-- **QT**  
-  QT is a declarative UI specification language through QML (QT Meta Language), used for building powerful user interfaces in desktop applications.
-
-- **BCrypt**  
-  A simple password hashing library used for securing passwords stored in the database.
-
-- **Express Session**  
-  Express Session is a middleware that acts as a bridge between the database and the web application, enabling session management for user authentication.
-
-- **Passport**  
-  Passport is an authentication middleware used in Node.js to simplify login and user authentication.
-
-- **MySQL**  
-  MySQL is an open-source relational database management system used for storing reservation and user data.
-
-- **GLFW**  
-  GLFW is a windowing library for configuring the usage of the OpenGL graphics API within desktop applications.
-
-- **Dear ImGui (Desktop Version)**  
-  ImGui is a graphics UI library for desktop applications using C++. It was chosen for its open-source nature and minimal bloat, making it a lightweight solution for building interactive interfaces.
-
-- **Microsoft Azure**  
-  Azure is a cloud computing platform used for building, deploying, and managing applications and services. We’re using it to host our website and manage cloud-based resources for the application.
+### Adopted Technologies
+- **Express JS**: Handles HTTP requests and responses, managing data crucial for system functionality.
+- **Node JS**: Cross-platform runtime for executing JavaScript code server-side.
+- **QT**: Used via QML for building desktop application UIs.
+- **BCrypt**: Hashes passwords securely for database storage.
+- **Express Session**: Middleware enabling session management for user authentication.
+- **Passport**: Simplifies login and user authentication in Node.js.
+- **MySQL**: Relational database system used for storing reservations and user data.
+- **GLFW**: Configures OpenGL graphics API usage in desktop applications.
+- **Dear ImGui (Desktop Version)**: Lightweight graphics UI library for building interfaces in C++.
+- **Microsoft Azure**: Hosts the website and manages cloud-based resources.
 
 ---
 
@@ -85,9 +70,9 @@ We attempted to implement automated tests to verify the correct functionality of
 - **Link to production system:** [Q-Up Live System](https://aan266.z13.web.core.windows.net/)
 - **Deployment Details:**
     - Hosted on **Azure** using Azure App Services for easy deployment and scaling.
-    - Continuous Integration and Continuous Deployment (CI/CD) pipeline set up with **GitHub Actions** for automatic testing and deployment to Azure.
-    - **Azure SQL Database** is used for the MySQL database to handle reservations and user data.
-    - **Azure Monitor** is configured for real-time performance monitoring and logging of the system in production.
+    - CI/CD pipeline set up with **GitHub Actions** for automatic testing and deployment to Azure.
+    - **Azure SQL Database** handles reservations and user data.
+    - **Azure Monitor** monitors real-time performance and logs system activity.
 
 ---
 
@@ -97,15 +82,15 @@ We adopted the **MIT License** because it is a permissive license that allows br
 ---
 
 ## Readme and Documentation
-- **Readme File:** [README.md](https://github.com/acc668/CS386_Group1/blob/main/README.md)  
-- **Contributing Guidelines:** [CONTRIBUTING.md](https://github.com/acc668/CS386_Group1/blob/main/CONTRIBUTING.md)  
-- **License File:** [LICENSE](https://github.com/acc668/CS386_Group1/blob/main/LICENSE)  
-- **Code of Conduct:** [CODE_OF_CONDUCT.md](https://github.com/acc668/CS386_Group1/blob/main/CODE_OF_CONDUCT.md)  
+- **Readme File:** [README.md](https://github.com/acc668/CS386_Group1/blob/main/README.md)
+- **Contributing Guidelines:** [CONTRIBUTING.md](https://github.com/acc668/CS386_Group1/blob/main/CONTRIBUTING.md)
+- **License File:** [LICENSE](https://github.com/acc668/CS386_Group1/blob/main/LICENSE)
+- **Code of Conduct:** [CODE_OF_CONDUCT.md](https://github.com/acc668/CS386_Group1/blob/main/CODE_OF_CONDUCT.md)
 
 ---
 
 ## UX Design
-The user interface was designed to mirror the aesthetic of existing university websites, utilizing blue and yellow to provide a consistent experience. The system is intuitive and easy to navigate, ensuring users can quickly access available features. Below are some screenshots demonstrating the interface:
+The user interface was designed to mirror the aesthetic of existing university websites, utilizing blue and yellow to provide a consistent experience. The system is intuitive and easy to navigate, ensuring users can quickly access available features.
 
 ---
 
@@ -119,3 +104,4 @@ During this first release, the team learned the importance of maintaining clear 
 
 ## Demo
 **Video Link:** [Q-Up System Demo](https://youtu.be/WsSoMz9_Xo0)
+
