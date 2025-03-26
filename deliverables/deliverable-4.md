@@ -11,29 +11,29 @@ Q-Up is an advanced scheduling application designed to streamline match organiza
 List of implemented requirements and corresponding pull requests:
 
 ### Frontend
-- **Requirement:** User authentication  
+- **Requirement:** User authentication
   **Issue:** [#13 - User Authentication](https://github.com/acc668/CS386_Group1/issues/13)
-  **Pull request:** [#73 - Implement Authentication](https://github.com/acc668/CS386_Group1/pull/73)  
+  **Pull request:** [#73 - Implement Authentication](https://github.com/acc668/CS386_Group1/pull/73)
   **Implemented by:** Clayton Ramsey
   **Approved by:** Anthony Narvaez
   **Print screen:** ![User Authentication](./images/userAuthentication.png)
 
-- **Requirement:** Real-time availability display  
-  **Issue:** [#15 - Real-time Display](https://github.com/acc668/CS386_Group1/issues/15)  
-  **Pull request:** [#89 - Availability Display](https://github.com/acc668/CS386_Group1/pull/89) 
+- **Requirement:** Real-time availability display
+  **Issue:** [#15 - Real-time Display](https://github.com/acc668/CS386_Group1/issues/15)
+  **Pull request:** [#89 - Availability Display](https://github.com/acc668/CS386_Group1/pull/89)
   **Implemented by:** Zackary Pond
   **Approved by:** Vince Carrillo
   **Print screen:** ![Availability Display](./images/availabilityDisplay.png)
 
 ### Backend
-- **Requirement:** PC reservation system  
-  **Issue:** [#17 - PC Reservation](https://github.com/acc668/CS386_Group1/issues/17)  
+- **Requirement:** PC reservation system
+  **Issue:** [#17 - PC Reservation](https://github.com/acc668/CS386_Group1/issues/17)
   **Pull request:** [#92 - Reservation System](https://github.com/acc668/CS386_Group1/pull/92)
   **Implemented by:** Anthony Narvaez
   **Approved by:** Alexandra Curry
   **Print screen:** ![PC Reservation](./images/pcReservation.png)
 
-- **Requirement:** Automated End-of-reservation notification 
+- **Requirement:** Automated End-of-reservation notification
   **Issue:** [#9 - Notifications](https://github.com/acc668/CS386_Group1/issues/9)
   **Pull request:** [#56 - Notifications System](https://github.com/acc668/CS386_Group1/pull/56)
   **Implemented by:** Vince Carrillo
@@ -42,41 +42,41 @@ List of implemented requirements and corresponding pull requests:
 
 ---
 
-## Tests  
+## Tests
 We attempted to implement automated tests to verify the correct functionality of our code. However, we encountered challenges with setting up automated tests for our website. As a result, we decided to focus our efforts on other aspects of the project. We plan to revisit automated testing in future iterations to ensure comprehensive testing of the system's core components.
 
 ---
 
 ## Technology
 ### Adopted Technologies:
-- **Express JS**  
+- **Express JS**
   Express JS is a backend web application framework for handling HTTP requests and responses, as well as managing data, which is crucial for our system's functionality.
 
-- **Node JS**  
+- **Node JS**
   Node JS is an open-source, cross-platform runtime environment for executing JavaScript code server-side.
 
-- **QT**  
+- **QT**
   QT is a declarative UI specification language through QML (QT Meta Language), used for building powerful user interfaces in desktop applications.
 
-- **BCrypt**  
+- **BCrypt**
   A simple password hashing library used for securing passwords stored in the database.
 
-- **Express Session**  
+- **Express Session**
   Express Session is a middleware that acts as a bridge between the database and the web application, enabling session management for user authentication.
 
-- **Passport**  
+- **Passport**
   Passport is an authentication middleware used in Node.js to simplify login and user authentication.
 
-- **MySQL**  
+- **MySQL**
   MySQL is an open-source relational database management system used for storing reservation and user data.
 
-- **GLFW**  
+- **GLFW**
   GLFW is a windowing library for configuring the usage of the OpenGL graphics API within desktop applications.
 
-- **Dear ImGui (Desktop Version)**  
+- **Dear ImGui (Desktop Version)**
   ImGui is a graphics UI library for desktop applications using C++. It was chosen for its open-source nature and minimal bloat, making it a lightweight solution for building interactive interfaces.
 
-- **Microsoft Azure**  
+- **Microsoft Azure**
   Azure is a cloud computing platform used for building, deploying, and managing applications and services. We’re using it to host our website and manage cloud-based resources for the application.
 
 ---
@@ -97,10 +97,10 @@ We adopted the **MIT License** because it is a permissive license that allows br
 ---
 
 ## Readme and Documentation
-- **Readme File:** [README.md](https://github.com/acc668/CS386_Group1/blob/main/README.md)  
-- **Contributing Guidelines:** [CONTRIBUTING.md](https://github.com/acc668/CS386_Group1/blob/main/CONTRIBUTING.md)  
-- **License File:** [LICENSE](https://github.com/acc668/CS386_Group1/blob/main/LICENSE)  
-- **Code of Conduct:** [CODE_OF_CONDUCT.md](https://github.com/acc668/CS386_Group1/blob/main/CODE_OF_CONDUCT.md)  
+- **Readme File:** [README.md](https://github.com/acc668/CS386_Group1/blob/main/README.md)
+- **Contributing Guidelines:** [CONTRIBUTING.md](https://github.com/acc668/CS386_Group1/blob/main/CONTRIBUTING.md)
+- **License File:** [LICENSE](https://github.com/acc668/CS386_Group1/blob/main/LICENSE)
+- **Code of Conduct:** [CODE_OF_CONDUCT.md](https://github.com/acc668/CS386_Group1/blob/main/CODE_OF_CONDUCT.md)
 
 ---
 
