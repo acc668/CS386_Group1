@@ -82,7 +82,7 @@ We adopted the **MIT License** because it is a permissive license that allows br
 ---
 
 ## Readme and Documentation
-- **Readme File:** [README.md](https://github.com/acc668/CS386_Group1/main/README.md)
+- **Readme File:** [README.md](https://github.com/acc668/CS386_Group1/main/Readme.md)
 - **Contributing Guidelines:** [CONTRIBUTING.md](https://github.com/acc668/CS386_Group1/main/CONTRIBUTING.md)
 - **License File:** [LICENSE](https://github.com/acc668/CS386_Group1/main/LICENSE)
 - **Code of Conduct:** [CODE_OF_CONDUCT.md](https://github.com/acc668/CS386_Group1/main/CODE_OF_CONDUCT.md)
