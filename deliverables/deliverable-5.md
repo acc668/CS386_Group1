@@ -13,7 +13,7 @@ The Q-Up system aims to provide a method of efficiently scheduling the use of co
 ### Diagram
 
 *Refer to the UML package diagram below:*  
-![Architecture Diagram](insert-image-path-here)
+![Architecture Diagram](./images/architectureDiagram.png)
 
 ### Rationale
 
@@ -40,7 +40,7 @@ The Q-Up architecture is designed using a layered and modular approach to ensure
 - **Description:**  
   The user specifies the time they want to reserve the PC. The app displays the available PCs for that time, the user selects one, and the app makes the reservation for that specific PC.
 
-*Insert sequence diagram illustrating the above flow here.*
+![Architecture Diagram](./images/sequenceDiagram.png)
 
 ---
 
