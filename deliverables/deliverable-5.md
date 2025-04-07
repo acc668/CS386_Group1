@@ -46,20 +46,16 @@ Q-Up’s architecture was designed using a layered and modular approach to ensur
 
 ## Design Patterns
 
-### 1. Behavioral Pattern: Strategy
+### 1. Behavioral Pattern: State
 
-*Insert UML class diagram of the Strategy pattern here.*
+![Behavioral Pattern: State Diagram](./images/behavioralState.png)
 
 - **Example Classes:**
-  - `IWarningStrategy`: Interface for warning behavior
-  - `TimeBasedWarning`: Sends warnings at set intervals
-  - `UsageBasedWarning`: Sends warnings based on usage stats
-  - `ReservationManager`: Uses a strategy object to manage warning behavior
-
-- **GitHub Links:**
-  - [`IWarningStrategy.java`](https://github.com/user/repo/blob/main/src/IWarningStrategy.java)
-  - [`TimeBasedWarning.java`](https://github.com/user/repo/blob/main/src/TimeBasedWarning.java)
-  - [`ReservationManager.java`](https://github.com/user/repo/blob/main/src/ReservationManager.java)
+  - `State`: Interface for reservation states
+  - `Available`: Represents a PC that is free to reserve
+  - `Reserved`: Represents a PC that has been reserved
+  - `InUse`: Represents a PC currently in use
+  - `Reservation`: Context class that transitions between states
 
 ### 2. Structural Pattern: Facade
 
