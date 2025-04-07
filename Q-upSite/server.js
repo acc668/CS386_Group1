@@ -80,8 +80,27 @@ passport.serializeUser((user, done) => {
 })
 
 //Deserializing User
-passport.deserializeUser((user, done) => {
-    done(null, {id:1, username:'admin'});
+passport.deserializeUser((id, done) => {
+
+    try {
+        //querying database for user
+        const results = connection.execute(
+            'SELECT id, username FROM users WHERE id = ?',
+            [id]
+        );
+
+        //no user found
+        if(results.length === 0) {
+            return done(null, false)
+        }
+
+        //if user found, returning the user object
+        return done(null, results[0]);
+    }
+    catch(err) {
+        done(err)
+    }
+
 })
 
 // Serve static files (HTML, CSS, JS)
@@ -100,7 +119,8 @@ app.use(express.urlencoded({ extended: false }));
 //async functions
 async function registerUser(username, password) {
     try {
-        const  hashedPassword = await bcrypt.hash(password, 10);
+        const saltRounds = 10
+        const  hashedPassword = await bcrypt.hash(password, saltRounds);
 
         await connection.execute(
             "INSERT INTO users (username, password) VALUES (?, ?)",
@@ -117,7 +137,13 @@ async function registerUser(username, password) {
 
 //routes------------------------------------------------------------------------
 
-//login route      
+//login routes     
+app.get("login", (req, res) => {
+    //serves the login page
+
+    //THIS MIGHT BE DIFFERENT DUE TO UTLIZATION OF POPUP
+} )
+
 app.post("/login", express.urlencoded({extended: false}), (req, res, next) => {
     //authenticate the log in attempt
     passport.authenticate('local', {
@@ -125,6 +151,24 @@ app.post("/login", express.urlencoded({extended: false}), (req, res, next) => {
         failureRedirect: '/login',
         failureFlash: true
     })(req, res, next);
+})
+
+//TODO: Make LOGOUT route
+
+//TODO: reservation routes
+app.get("/reserve", (req, res) => {
+    //serve the "Make a Reservation" page, only if the user is logged in
+
+    passport.authenticate('local', {
+        successRedirect: '/reserve',
+        failureRedirect: '/login',
+        failureFlash: true
+    })
+
+})
+
+app.post("/reserve", express.urlencoded({extended: false}), (req, res, next) =>{
+    //save the new reservation request in the database
 })
 
 //temporary register endpoint for testing of user account creation
