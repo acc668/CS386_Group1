@@ -62,15 +62,12 @@ Q-Up’s architecture was designed using a layered and modular approach to ensur
 *Insert UML class diagram of the Facade pattern here.*
 
 - **Example Classes:**
-  - `ReservationSystemFacade`: Simplifies interaction between UI, authentication, and database
-  - `UserAuthService`
-  - `ReservationService`
-  - `DatabaseAccessLayer`
-
-- **GitHub Links:**
-  - [`ReservationSystemFacade.java`](https://github.com/user/repo/blob/main/src/ReservationSystemFacade.java)
-  - [`UserAuthService.java`](https://github.com/user/repo/blob/main/src/UserAuthService.java)
-  - [`DatabaseAccessLayer.java`](https://github.com/user/repo/blob/main/src/DatabaseAccessLayer.java)
+  - `ReservationFacade`: Unified interface to handle reservations and warnings
+  - `ReservationManager`: Handles state and logic for PC reservations
+  - `WarningStrategy`: Interface for sending warnings
+  - `TimeBasedWarning`, `UsageBasedWarning`: Implement the `WarningStrategy`
+  - `PC`: Represents a reservable PC and holds state info
+  - `User`: Represents a user making a reservation
 
 ---
 
