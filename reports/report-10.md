@@ -30,56 +30,56 @@
 
 ### Alexandra
 - Deliverable 5
-- Worksheet 
-- Worksheet 
+- Worksheet 8-1
+- Worksheet 8-2
 
 ### Anthony
 - Deliverable 5
-- Worksheet 
-- Worksheet 
+- Worksheet 8-1
+- Worksheet 8-2
 
 ### Zack
 - Deliverable 5
-- Worksheet 
-- Worksheet 
+- Worksheet 8-1
+- Worksheet 8-2
 
 ### Vince
 - Deliverable 5
-- Worksheet 
-- Worksheet 
+- Worksheet 8-1
+- Worksheet 8-2
 
 ### Clayton
 - Deliverable 5
-- Worksheet 
-- Worksheet 
+- Worksheet 8-1
+- Worksheet 8-2
 
 ---
 
 ## 2. Retrospective
 
-1. **Appreciations:** 
-2. **Successes:** 
-3. **Failures:** 
-4. **Barriers:** 
-5. **What we should try next time:** 
+1. **Appreciations:** Alexandra carried a large portion of the assignments 
+2. **Successes:** None
+3. **Failures:** No new update on project
+4. **Barriers:** Large time constraints from other obligations
+5. **What we should try next time:** Better agenda planning
 
 ---
 
 ## 3. Next Steps
 
 ### Clayton
-- 
+- Continue Research
 
 ### Vince
-- 
+- Continue PC development
 
 ### Anthony
-- 
+- Help fill in other roles
 
 ### Zack
-- 
+- Continue JS work
 
 ### Alexandra
-- 
+- Visual improvements
 
 ---
