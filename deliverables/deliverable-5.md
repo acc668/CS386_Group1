@@ -23,9 +23,7 @@ Q-Up’s architecture was designed using a layered and modular approach to ensur
 
 ## Class Diagrams
 
-*Insert UML class diagram showing implementation-level classes here.*
-
-> Note: Ensure to include visibilities, attribute types, method signatures, and associations.
+![Class Diagram](./images/classDiagram2.png)
 
 ---
 
@@ -59,7 +57,7 @@ Q-Up’s architecture was designed using a layered and modular approach to ensur
 
 ### 2. Structural Pattern: Facade
 
-*Insert UML class diagram of the Facade pattern here.*
+![Structural Pattern: Facade Diagram](./images/structuralFacade.png)
 
 - **Example Classes:**
   - `ReservationFacade`: Unified interface to handle reservations and warnings
