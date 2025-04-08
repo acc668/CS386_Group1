@@ -17,15 +17,13 @@ The Q-Up system aims to provide a method of efficiently scheduling the use of co
 
 ### Rationale
 
-The Q-Up architecture is designed using a layered and modular approach to ensure scalability, maintainability, and cross-platform compatibility. It separates responsibilities across the Presentation, Business, Data, and Cross-Cutting layers, allowing for clearer organization and easier updates. The Presentation Layer supports both Web and PC platforms with shared interface logic, while the Business Layer handles core functionalities like authentication and request handling. A centralized Web App API enables consistent communication between clients and backend services. The architecture also includes separate databases for users, events, and reservations, promoting data isolation and optimized access. Cross-cutting concerns like security, session management, and error handling are centralized to maintain consistency across the system. This structure enables Q-Up to be flexible, secure, and ready to scale with future needs.
+Q-Up’s architecture was designed using a layered and modular approach to ensure scalability, maintainability, and cross-platform compatibility. As a group, we decided to separate responsibilities across the Presentation, Business, Data, and Cross-Cutting layers. This allows for clearer organization and easier updates. The Presentation Layer was set up to support both Web and PC platforms with shared interface logic, while the Business Layer was set up to handle core functionalities like authentication and request handling. The architecture was also built to include separate databases for users, events, and reservations in order to promote data isolation and optimized access. The Cross-cutting Layer was set up to handle concerns like security, session management, and error handling, which are centralized to maintain consistency across the system. This structure enables Q-Up to be flexible, secure, and ready to scale with future needs.
 
 ---
 
 ## Class Diagrams
 
-*Insert UML class diagram showing implementation-level classes here.*
-
-> Note: Ensure to include visibilities, attribute types, method signatures, and associations.
+![Class Diagram](./images/classDiagram2.png)
 
 ---
 
@@ -46,35 +44,28 @@ The Q-Up architecture is designed using a layered and modular approach to ensure
 
 ## Design Patterns
 
-### 1. Behavioral Pattern: Strategy
+### 1. Behavioral Pattern: State
 
-*Insert UML class diagram of the Strategy pattern here.*
+![Behavioral Pattern: State Diagram](./images/behavioralState.png)
 
 - **Example Classes:**
-  - `IWarningStrategy`: Interface for warning behavior
-  - `TimeBasedWarning`: Sends warnings at set intervals
-  - `UsageBasedWarning`: Sends warnings based on usage stats
-  - `ReservationManager`: Uses a strategy object to manage warning behavior
-
-- **GitHub Links:**
-  - [`IWarningStrategy.java`](https://github.com/user/repo/blob/main/src/IWarningStrategy.java)
-  - [`TimeBasedWarning.java`](https://github.com/user/repo/blob/main/src/TimeBasedWarning.java)
-  - [`ReservationManager.java`](https://github.com/user/repo/blob/main/src/ReservationManager.java)
+  - `State`: Interface for reservation states
+  - `Available`: Represents a PC that is free to reserve
+  - `Reserved`: Represents a PC that has been reserved
+  - `InUse`: Represents a PC currently in use
+  - `Reservation`: Context class that transitions between states
 
 ### 2. Structural Pattern: Facade
 
-*Insert UML class diagram of the Facade pattern here.*
+![Structural Pattern: Facade Diagram](./images/structuralFacade.png)
 
 - **Example Classes:**
-  - `ReservationSystemFacade`: Simplifies interaction between UI, authentication, and database
-  - `UserAuthService`
-  - `ReservationService`
-  - `DatabaseAccessLayer`
-
-- **GitHub Links:**
-  - [`ReservationSystemFacade.java`](https://github.com/user/repo/blob/main/src/ReservationSystemFacade.java)
-  - [`UserAuthService.java`](https://github.com/user/repo/blob/main/src/UserAuthService.java)
-  - [`DatabaseAccessLayer.java`](https://github.com/user/repo/blob/main/src/DatabaseAccessLayer.java)
+  - `ReservationFacade`: Unified interface to handle reservations and warnings
+  - `ReservationManager`: Handles state and logic for PC reservations
+  - `WarningStrategy`: Interface for sending warnings
+  - `TimeBasedWarning`, `UsageBasedWarning`: Implement the `WarningStrategy`
+  - `PC`: Represents a reservable PC and holds state info
+  - `User`: Represents a user making a reservation
 
 ---
 
