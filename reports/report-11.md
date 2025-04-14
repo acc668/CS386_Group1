@@ -41,6 +41,7 @@
 ### Zack
 - Deliverable 6
 - Report 11
+- Update to Availability/Reservation page
 - 
 
 ### Vince
@@ -57,29 +58,29 @@
 
 ## 2. Retrospective
 
-1. **Appreciations:** 
-2. **Successes:** 
-3. **Failures:** 
-4. **Barriers:** 
-5. **What we should try next time:** 
+1. **Appreciations:** Zachs additions to the website 
+2. **Successes:** Covering most requirements
+3. **Failures:** Automatic Testing
+4. **Barriers:** none
+5. **What we should try next time:** Begin development of tasks earlier 
 
 ---
 
 ## 3. Next Steps
 
 ### Clayton
-- 
+- Finishing up auto testing
 
 ### Vince
-- 
+- Fill In
 
 ### Anthony
-- 
+- UI/UX Additions/Changes
 
 ### Zack
-- 
+- UI/UX Additions/Changes
 
 ### Alexandra
-- 
+- UI/UX Additions/Changes
 
----
+-
