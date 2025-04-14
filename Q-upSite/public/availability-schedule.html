@@ -1,73 +1,62 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>PC Availability & Schedule</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PC Availability & Schedule</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="pc-availability-page">
-    <!-- Navigation -->
-    <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="availability-schedule.html">Availability & Schedule</a>
-        <a href="calendar.html">Calendar</a>
-        <a href="faq.html">FAQ</a>
-        <a href="New_Account.html">Create Account</a>
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="availability-schedule.html">Availability & Schedule</a>
+    <a href="calendar.html">Calendar</a>
+    <a href="faq.html">FAQ</a>
+    <a href="New_Account.html">Create Account</a>
+  </nav>
 
-    </nav>
+  <section class="availability-schedule-container">
+    <div class="schedule-section">
+      <h2>Reserve a PC</h2>
+      <form class="schedule-form" id="availabilityForm">
+        <label for="reservation-date">Date:</label>
+        <input type="date" id="reservation-date" required />
 
-    <!-- Availability & Schedule Layout -->
-    <section class="availability-schedule-container">
-        <!-- Schedule Section -->
-        <div class="schedule-section">
-            <h2>Schedule</h2>
-            <form class="schedule-form">
-                <label for="start-time">Start Time:</label>
-                <input type="time" id="start-time" required />
+        <label for="reservation-start-time">Start Time:</label>
+        <input type="time" id="reservation-start-time" required />
 
-                <label for="end-time">End Time:</label>
-                <input type="time" id="end-time" required />
+        <label for="reservation-end-time">End Time:</label>
+        <input type="time" id="reservation-end-time" required />
 
-                <label for="pc-number">PC #:</label>
-                <input type="number" id="pc-number" min="1" max="12" required />
-
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-
-        <!-- PC Availability Section -->
-        <div class="pc-container">
-            <h2 class="pc-title">PC Availability</h2>
-            <div class="fixed-box"></div> <!-- Background box stays behind -->
-            <div class="pc-grid">
-                <div class="pc available">1</div>
-                <div class="pc available">2</div>
-                <div class="pc available">3</div>
-                <div class="pc available">4</div>
-                <div class="pc available">5</div>
-                <div class="pc available">6</div>
-                <div class="pc available">7</div>
-                <div class="pc available">8</div>
-                <div class="pc available">9</div>
-                <div class="pc available">10</div>
-                <div class="pc available">11</div>
-                <div class="pc available">12</div>
-            </div>
-            <div class="fixed-box"></div>
-        </div>
-    </section>
-
-    <!-- Login Modal -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <h2>Login Required</h2>
-            <input type="text" id="loginUsername" placeholder="Username" />
-            <input type="password" id="loginPassword" placeholder="Password" />
-            <button id="loginSubmit">Reserve</button>
-            <p id="loginError" style="color: red; display: none;">Invalid credentials</p>
-        </div>
+        <button type="submit">Check Availability</button>
+      </form>
     </div>
 
-    <script src="script.js"></script>
+    <div class="pc-container" id="pcContainer" style="display: none;">
+      <h2 class="pc-title">Select a PC</h2>
+      <div class="fixed-box"></div>
+      <div class="pc-grid" id="pcGrid"></div>
+      <div class="fixed-box"></div>
+
+      <!-- Reservation Summary -->
+      <div id="reservationSummary" class="reservation-summary" style="margin-top: 20px; color: white;"></div>
+    </div>
+  </section>
+
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <h2>Login Required</h2>
+      <input type="text" id="loginUsername" placeholder="Username" />
+      <input type="password" id="loginPassword" placeholder="Password" />
+      <button id="loginSubmit">Reserve</button>
+      <p id="loginError" style="color: red; display: none;">Invalid credentials</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,154 +1,116 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Handle PC Availability Toggle
-    const pcs = document.querySelectorAll(".pc");
-    pcs.forEach(pc => {
-        pc.addEventListener("click", function () {
-            this.classList.toggle("available");
-            this.classList.toggle("occupied");
+  const availabilityForm = document.getElementById("availabilityForm");
+  const pcContainer = document.getElementById("pcContainer");
+  const pcGrid = document.getElementById("pcGrid");
+  const loginModal = document.getElementById("loginModal");
+  const loginSubmit = document.getElementById("loginSubmit");
+  const loginError = document.getElementById("loginError");
+  const summaryDiv = document.getElementById("reservationSummary");
+
+  let selectedPC = null;
+  let selectedDate = null;
+  let selectedStartTime = null;
+  let selectedEndTime = null;
+
+  const storedEmail = localStorage.getItem("registeredEmail");
+  const storedPassword = localStorage.getItem("registeredPassword");
+
+  const reservations = [
+    { date: "2025-04-12", start: "15:00", end: "16:00", pc: 2 },
+    { date: "2025-04-12", start: "15:30", end: "16:30", pc: 5 }
+  ];
+
+  function isOverlapping(start1, end1, start2, end2) {
+    return start1 < end2 && start2 < end1;
+  }
+
+  availabilityForm?.addEventListener("submit", function (e) {
+    e.preventDefault();
+    selectedDate = document.getElementById("reservation-date").value;
+    selectedStartTime = document.getElementById("reservation-start-time").value;
+    selectedEndTime = document.getElementById("reservation-end-time").value;
+
+    if (!selectedDate || !selectedStartTime || !selectedEndTime) return;
+
+    // Build PC Grid
+    pcGrid.innerHTML = "";
+
+    for (let i = 1; i <= 12; i++) {
+      const pcDiv = document.createElement("div");
+      pcDiv.classList.add("pc");
+
+      const isReserved = reservations.some(r =>
+        r.date === selectedDate &&
+        r.pc === i &&
+        isOverlapping(selectedStartTime, selectedEndTime, r.start, r.end)
+      );
+
+      if (isReserved) {
+        pcDiv.classList.add("occupied");
+      } else {
+        pcDiv.classList.add("available");
+        pcDiv.addEventListener("click", function () {
+          selectedPC = i;
+          loginModal.style.display = "block";
         });
-    });
+      }
 
-    // Handle Calendar Navigation
-    let currentDate = new Date();
-    const monthYear = document.getElementById("month-year");
-    const calendarGrid = document.querySelector(".calendar-grid");
-    const prevMonthBtn = document.getElementById("prev-month");
-    const nextMonthBtn = document.getElementById("next-month");
-
-    function renderCalendar() {
-        calendarGrid.innerHTML = "";
-        const firstDayIndex = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1).getDay();
-        const lastDay = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 0).getDate();
-        monthYear.textContent = currentDate.toLocaleDateString("en-US", { month: "long", year: "numeric" });
-
-        for (let i = 0; i < firstDayIndex; i++) {
-            const emptyCell = document.createElement("div");
-            emptyCell.classList.add("empty-day");
-            calendarGrid.appendChild(emptyCell);
-        }
-        
-        for (let day = 1; day <= lastDay; day++) {
-            const dayCell = document.createElement("div");
-            dayCell.classList.add("calendar-day");
-            dayCell.textContent = day;
-            dayCell.addEventListener("click", () => alert(`Selected date: ${day} ${monthYear.textContent}`));
-            calendarGrid.appendChild(dayCell);
-        }
+      pcDiv.textContent = i;
+      pcGrid.appendChild(pcDiv);
     }
 
-    prevMonthBtn.addEventListener("click", () => {
-        currentDate.setMonth(currentDate.getMonth() - 1);
-        renderCalendar();
+    // Show Reservation Summary
+    const reservationMap = {};
+    reservations.forEach(r => {
+      if (r.date === selectedDate) {
+        if (!reservationMap[r.pc]) reservationMap[r.pc] = [];
+        reservationMap[r.pc].push(`${r.start}–${r.end}`);
+      }
     });
 
-    nextMonthBtn.addEventListener("click", () => {
-        currentDate.setMonth(currentDate.getMonth() + 1);
-        renderCalendar();
-    });
+    let summaryHTML = `<h3>📅 Reservations for ${selectedDate}</h3>`;
+    summaryHTML += `<div class="reservation-grid">`; // Start the grid layout
 
-    renderCalendar();
+    for (let i = 1; i <= 12; i++) {
+      const slots = reservationMap[i] || ["(none)"];
+      summaryHTML += `<div class="reservation-item">
+                        <strong>PC ${i}:</strong>
+                        <div>${slots.join(", ")}</div>
+                      </div>`;
+    }
 
-    // FAQ Toggle
-    document.querySelectorAll(".faq-item").forEach(item => {
-        item.addEventListener("click", function () {
-            this.classList.toggle("expanded");
-        });
-    });
+    summaryHTML += `</div>`; // Close the grid container
+    summaryDiv.innerHTML = summaryHTML;
 
-    // Form Handling
-    document.getElementById('event-form')?.addEventListener('submit', function (event) {
-        event.preventDefault();
-        const date = document.getElementById('event-date').value;
-        const name = document.getElementById('event-name').value;
-        alert(`Event '${name}' added on ${date}`);
-    });
-});
+    pcContainer.style.display = "flex";
+  });
 
-const storedEmail = localStorage.getItem("registeredEmail");
-const storedPassword = localStorage.getItem("registeredPassword");
+  loginSubmit?.addEventListener("click", function () {
+    const email = document.getElementById("loginUsername").value.trim();
+    const password = document.getElementById("loginPassword").value.trim();
 
-loginSubmit.addEventListener("click", function () {
-    const enteredEmail = document.getElementById("loginUsername").value.trim();
-    const enteredPassword = document.getElementById("loginPassword").value.trim();
+    if (email === storedEmail && password === storedPassword && selectedPC) {
+      reservations.push({
+        date: selectedDate,
+        start: selectedStartTime,
+        end: selectedEndTime,
+        pc: selectedPC
+      });
 
-    if (enteredEmail === storedEmail && enteredPassword === storedPassword) {
-        loginError.style.display = "none";
-        loginModal.style.display = "none";
-
-        if (formPendingSubmission) {
-            const pcNum = parseInt(document.getElementById("pc-number").value);
-            const pcBoxes = document.querySelectorAll(".pc");
-
-            if (pcNum >= 1 && pcNum <= pcBoxes.length) {
-                const selected = pcBoxes[pcNum - 1];
-                selected.classList.remove("available");
-                selected.classList.add("occupied");
-                alert(`PC ${pcNum} reserved successfully.`);
-            }
-
-            formPendingSubmission = false;
-            scheduleForm.reset();
-        }
+      alert(`PC ${selectedPC} reserved on ${selectedDate} from ${selectedStartTime} to ${selectedEndTime}`);
+      loginModal.style.display = "none";
+      pcContainer.style.display = "none";
+      availabilityForm.reset();
+      selectedPC = null;
     } else {
-        loginError.style.display = "block";
-        loginError.textContent = "Invalid email or password.";
+      loginError.style.display = "block";
+      loginError.textContent = "Invalid credentials.";
     }
-});
+  });
 
-
-let formPendingSubmission = false;
-
-document.addEventListener("DOMContentLoaded", function () {
-    const scheduleForm = document.querySelector(".schedule-form");
-    const loginModal = document.getElementById("loginModal");
-    const loginSubmit = document.getElementById("loginSubmit");
-    const loginError = document.getElementById("loginError");
-
-    let formPendingSubmission = false;
-
-    if (scheduleForm) {
-        scheduleForm.addEventListener("submit", function (e) {
-            e.preventDefault();
-            formPendingSubmission = true;
-            loginModal.style.display = "block"; // 👈 shows modal
-        });
+  window.addEventListener("click", function (e) {
+    if (e.target === loginModal) {
+      loginModal.style.display = "none";
     }
-
-    if (loginSubmit) {
-        loginSubmit.addEventListener("click", function () {
-            const email = document.getElementById("loginUsername").value;
-            const password = document.getElementById("loginPassword").value;
-
-            const storedEmail = localStorage.getItem("registeredEmail");
-            const storedPassword = localStorage.getItem("registeredPassword");
-
-            if (email === storedEmail && password === storedPassword) {
-                loginError.style.display = "none";
-                loginModal.style.display = "none";
-
-                if (formPendingSubmission) {
-                    const pcNum = parseInt(document.getElementById("pc-number").value);
-                    const pcBoxes = document.querySelectorAll(".pc");
-                    const selected = pcBoxes[pcNum - 1];
-
-                    if (selected) {
-                        selected.classList.remove("available");
-                        selected.classList.add("occupied");
-                    }
-
-                    alert(`PC ${pcNum} reserved successfully.`);
-                    formPendingSubmission = false;
-                    scheduleForm.reset();
-                }
-            } else {
-                loginError.style.display = "block";
-            }
-        });
-    }
-
-    window.addEventListener("click", function (e) {
-        if (e.target === loginModal) {
-            loginModal.style.display = "none";
-        }
-    });
+  });
 });
