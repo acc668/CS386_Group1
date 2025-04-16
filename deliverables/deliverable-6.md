@@ -11,76 +11,72 @@
 ## Requirements
 
 ### Requirement #1:
-- **Requirement**: As a Competitive Player, I want to see which PCs are available so I can select the best one for my game session.  
-- **Issue**: [Issue #8 – Competitive Player User Story #1](https://github.com/acc668/CS386_Group1/issues/8)  
-- **Pull Request**: [#5 – Reserve Page Setup](https://github.com/acc668/CS386_Group1/pull/5)  
+- **Requirement**: As a Spectator, I want to view ongoing matches so I can decide which one to watch  
+- **Issue**: [Issue #15 – Spectator User Story #1](https://github.com/acc668/CS386_Group1/issues/15)  
+- **Pull Request**: [#5 – Calendar Page Setup](https://github.com/acc668/CS386_Group1/pull/133)  
 - **Implemented by**: Alexandra Curry  
 - **Approved by**: Zackary Pond  
 - **Screenshot**:  
-  ![Reserve Page](<Insert Screenshot Link Here>)
+  ![Calendar Page](<./images/eventCalendar(Imp2).png>)
 
 ### Requirement #2:
 - **Requirement**: As an Advisor, I want to view the schedule so that I can coordinate meetings with students.  
 - **Issue**: [Issue #17 – Advisor Story #1](https://github.com/acc668/CS386_Group1/issues/17)  
-- **Pull Request**: [#9 – Added event creation functionality](https://github.com/acc668/CS386_Group1/pull/9)  
+- **Pull Request**: [#80 – Added event and account creation functionality](https://github.com/acc668/CS386_Group1/pull/80)  
 - **Implemented by**: Clayton Ramsey  
 - **Approved by**: Vince Carrillo  
 - **Screenshot**:  
-  ![Advisor Schedule](<Insert Screenshot Link Here>)
+  ![Create Account](<./images/createAccount(imp2).png>)
 
 ### Requirement #3:
-- **Requirement**: As a Casual Player, I want to reserve a PC easily so I can casually enjoy gameplay.  
+- **Requirement**: As a Casual Player, I want to reserve a PC easily so I can casually enjoy gameplay.
 - **Issue**: [Issue #11 – Casual Player User Story #2](https://github.com/acc668/CS386_Group1/issues/11)  
-- **Pull Request**: [#6 – Nav bar and site flow](https://github.com/acc668/CS386_Group1/pull/6)  
+- **Pull Request**: [#83 – Nav bar and site flow](https://github.com/acc668/CS386_Group1/pull/83)  
 - **Implemented by**: Vince Carrillo  
 - **Approved by**: Clayton Ramsey  
 - **Screenshot**:  
-  ![Nav Bar](<Insert Screenshot Link Here>)
+  ![Reserve a PC](<./images/reserveAPC(Imp2).png>)
 
 ### Requirement #4:
-- **Requirement**: As a Spectator, I want to view ongoing matches so I can decide which one to watch.  
-- **Issue**: [Issue #15 – Spectator User Story #1](https://github.com/acc668/CS386_Group1/issues/15)  
-- **Pull Request**: [#10 – Validate PC Reservations](https://github.com/acc668/CS386_Group1/pull/10)  
+- **Requirement**: As a Competitive Player, I want to see which PCs are available so I can select the best one for my game session.
+- **Issue**: [Issue #8 – Competitive Player User Story #1](https://github.com/acc668/CS386_Group1/issues/8)  
+- **Pull Request**: [#137 – Update Reservation UI](https://github.com/acc668/CS386_Group1/pull/137)  
 - **Implemented by**: Zackary Pond  
 - **Approved by**: Alexandra Curry  
 - **Screenshot**:  
-  ![Spectator View](<Insert Screenshot Link Here>)
+  ![Available PCs](<./images/availablePCs(Imp2).png>)
 
 ### Requirement #5:
-- **Requirement**: As a User, I want to access the reserve page from the home page so I can begin scheduling PCs immediately.  
-- **Issue**: [Issue #8 – Competitive Player User Story #1](https://github.com/acc668/CS386_Group1/issues/8)  
-- **Pull Request**: [#5 – Reserve Page Setup](https://github.com/acc668/CS386_Group1/pull/5)  
-- **Implemented by**: Anthony Abdiel  
+- **Requirement**: As a competitive gamer I want to know what PCs are available at certain times of that I can refine my skills in an efficient way.
+- **Issue**: [Issue #14 – Competitive Player User Story #2]([https://github.com/acc668/CS386_Group1/issues/8](https://github.com/acc668/CS386_Group1/issues/14))   
+- **Pull Request**: [#139 – Restructured Routes to match front end changes](https://github.com/acc668/CS386_Group1/pull/139) 
+- **Implemented by**: Anthony Narvaez  
 - **Approved by**: Alexandra Curry  
 - **Screenshot**:  
-  ![Reserve Page Navigation](<Insert Screenshot Link Here>)
+  ![Log In Required](<./images/loginRequired(Imp2).png>)
 
 ---
 
 ## Tests
 
-- **Test Framework**: 
-- **Test Folder**: 
-- **Example Test Case**: 
-  - **Class Being Tested**: 
-  - **Test File**: 
-- **Test Results Screenshot**: 
-  ![Test Results](<Insert Screenshot Link Here>)
+Due to factors such as conflicting schedules, lack of communication, and misunderstanding of testing requirements, no automated testing was conducted for implementation two.
 
 ---
 
 ## Demo
 
-**Demo Video**: [Insert Demo Video Link Here]
+**Demo Video**: https://youtu.be/ehroVfKOsQY
 
 ---
 
 ## Code Quality
 
-Our team prioritized code quality by establishing clear conventions and best practices from the start. We agreed on consistent naming conventions, modular file structures, and documentation within code to enhance readability and maintainability. All code contributions were submitted through GitHub pull requests, which were reviewed by at least one other team member before merging. This peer review process helped catch bugs early, enforce standards, and share knowledge. We also referenced user stories to ensure each feature met its intended purpose and fit cleanly into the overall system architecture.
+To maintain code quality, our team agreed on a consistent document structure and naming convention for the files in the project. Each page corresponded to its own file from the beginning of the project, which allowed the development to be modular and easy to maintain. Additionally, contributions to the project required a different team member to review and approve the pull request. This helped ensure that there was a peer review process in place and that bugs with code functionality were caught early on.
+
 
 ---
 
 ## Lessons Learned
 
-During the second release, our team learned the importance of early integration and consistent communication. Coordinating both frontend and backend components required clear planning and version control discipline, especially when merging features that touched shared files. We also gained a better understanding of how user feedback and real-world testing shape feature prioritization. While we continue developing the project, we will most likely implement automated testing earlier in the process, improve documentation, and consider using a framework or component library to speed up UI development and ensure consistency across pages.
+Implementation two helped us learn about the importance of communication and early integration of project requirements. Communication was especially important when it came to implementing features that interacted with both the front and the back end as these are more likely to cause merge conflicts. The team also learned about the importance of testing and development centered around testing as this allows the preservation of the quality and functionality of our project. We do need to implement more automated testing, however, as this will test for more edge cases than the manual testing we have done so far. 
+
