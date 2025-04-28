@@ -84,8 +84,9 @@ An acceptance test verifies the correct implementation of a feature from the use
 
 ### Results
 
-- **User 1 Feedback**: <Insert Results Here>
-- **User 2 Feedback**: <Insert Results Here>
+- **User 1: Varsity Captain Feedback**:
+  * 
+- **User 2: Advisor Feedback**: <Insert Results Here>
 - **User 3 Feedback**: <Insert Results Here>
 
 ---
