@@ -52,10 +52,7 @@ An acceptance test verifies the correct implementation of a feature from the use
 **Tasks Given to Users:**
 - Navigate to HomePage
 - Register for an account and log in
-- Schedule an event
 - Reserve a computer for a specific timeslot
-- Cancel an event or reservation
-- Log out of the system
 
 **Data Collected:**
 - Time taken to complete each task
@@ -69,13 +66,11 @@ An acceptance test verifies the correct implementation of a feature from the use
 - Open Questions:
   - What was your first impression of the homepage?
   - Was there anything confusing or unexpected when using the site?
-  - How easy or difficult was it to schedule an event?
   - If you could change one thing about the site, what would it be?
   - How would you describe the overall user experience?
   - How does the system compare to any scheduling tools you've used before, such as when2meet?
 - Closed Questions:
   - On a scale of 1 to 10, how easy was it to navigate to the homepage?
-  - On a scale of 1 to 10, how easy was it to schedule an event?
   - On a scale of 1 to 10, how likely are you to recommend this system to others?
   - On a scale of 1 to 10, how would you rate the visual design of the website?
   - On a scale of 1 to 10, how likely would you use the system in its current state?
@@ -85,9 +80,99 @@ An acceptance test verifies the correct implementation of a feature from the use
 ### Results
 
 - **User 1: Varsity Captain Feedback**:
-  * 
-- **User 2: Advisor Feedback**: <Insert Results Here>
-- **User 3 Feedback**: <Insert Results Here>
+  - Task Results:
+    - Navigate to Homepage
+      - 2 seconds
+      - No errors encountered
+      - 1 attempt
+      - Nothing of note
+      - 8/10
+      - Add a bit more info. about the website
+    - Register for an account and log in
+      - About 2 minutes
+      - No errors encountered
+      - 1 attempt
+      - 7/10
+      - Should be more apparent that an account needs to be made
+    - Reserve a computer for a specific timeslot
+      - About 2 minutes
+      - No errors encountered
+      - 1 attempt
+      - Satisfaction of seeing which computers are available and which aren't
+      - 8/10
+      - No suggestions or feedback
+  - Open Questions:
+    - The homepage feels very bare bones and simple.
+    - There was nothing confusing or unexpected when using the site.
+    - Forcing you to make an account, or adding a disclaimer about not being able to reserve a pc without logging in first.
+    - It feels accessible and easy to use, other than the above suggestion.
+    - It has more features and is easier to navigate for multiple events.
+  - Closed Questions:
+    - 10, very easy.
+    - 9, it was easy to use and convenient to see what computers were already taken.
+    - 7, very simple and doesn't do anything crazy or bad.
+    - 9, way easier than going to message random officers regarding PC reservation and convenient.
+- **User 2: Advisor Feedback**:
+  - Task Results:
+    - Navigate to Homepage
+      - 2 seconds
+      - No errors encountered
+      - 1 attempt
+      - Nothing of note
+      - 5/10
+      - Add more information, and give a statement about the area the site is for
+    - Register for an account and log in
+      - Around 3 minutes
+      - No errors encountered
+      - 1 attempt
+      - Nothing of note
+      - 6.5/10
+      - Give the user an actual profile page where they can change preferred way of being informed about reservations and such
+    - Reserve a computer for a specific timeslot
+      - Around 1 minute
+      - No errors encountered
+      - 1 attempt
+      - User seemed happy with the reservation system
+      - 9/10
+      - If someone is in the process of reserving a specific PC, maybe have that pop up for others who are looking to reserve. Maybe instead of the green or red, you could use yellow?
+  - Open Question Responses:
+    - Homepage needs more information. It feels like it lacks personality.
+    - Was confusing when navigating to the reservation page because you weren't told that you needed an account to be made beforehand.
+    - Force the user to make an account or log in when they navigate to the homepage.
+    - I like the accessibility of the site.
+    - Most other tools we've used have not been as helpful, and don't have as much information present.
+  - Closed Question Responses:
+    - 10
+    - 8.5
+    - 7
+    - 9
+- **User 3: Club Officer Feedback**:
+  - Task Results:
+    - Navigate to Homepage
+      - Time taken to complete each task
+      - Errors encountered
+      - Number of attempts to complete tasks
+      - Notes on user behavior
+      - Overall satisfaction rating
+      - General feedback and suggestions
+    - Register for an account and log in
+      - Time taken to complete each task
+      - Errors encountered
+      - Number of attempts to complete tasks
+      - Notes on user behavior
+      - Overall satisfaction rating
+      - General feedback and suggestions
+    - Reserve a computer for a specific timeslot
+      - Time taken to complete each task
+      - Errors encountered
+      - Number of attempts to complete tasks
+      - Notes on user behavior
+      - Overall satisfaction rating
+      - General feedback and suggestions
+  - Open Question Responses:
+    - 
+  - Closed Question Responses:
+    - 
 
 ---
 
