@@ -170,19 +170,37 @@ An acceptance test verifies the correct implementation of a feature from the use
       - Overall satisfaction rating
       - General feedback and suggestions
   - Open Question Responses:
-    - 
+    - It needs more information presented at first glance.
+    - There was nothing confusing or unexpected when using the site.
+    - Light Mode, as well as Dark Mode; More information on all pages.
+    - Decent user experience, but give more direction when using the site, and maybe let users know what all they can do with it.
+    - Compared to when2meet, this website does a better job of communicating vital information to users.
   - Closed Question Responses:
-    - 
+    - 10
+    - 6
+    - 7.5
+    - 8
 
 ---
 
 ### Reflections
 
-- **Features that Worked Well**: <Insert Reflection Here>
-- **Suggested Changes**: <Insert Reflection Here>
-- **Learning Curve Observations**: <Insert Reflection Here>
-- **Task Completion Performance**: <Insert Reflection Here>
-- **User Satisfaction**: <Insert Reflection Here>
-- **Overall Value Proposition Achievement**: <Insert Reflection Here>
+- **Features that Worked Well**:
+  - Homepage
+  - PC Reservation
+  - Account Creation
+  - Calendar Navigation
+- **Suggested Changes**:
+  - Give more direction on what users can do with the site
+  - Give more information regarding needing to make an account for PC reservation
+  - Give more information regarding the Advanced Media Lab and why the application was made
+- **Learning Curve Observations**:
+  - There isn't much of a learning curve for the website, but outlining it's main features could streamline user experience.
+- **Task Completion Performance**:
+  - There were no real issues with task completion for any of the users.
+- **User Satisfaction**:
+  - The average user satisfaction rating totals at a 10 for homepage navigation, an 8 for recommendations of the site to others, a 7 for the visual design of the website, and a 9 for the usage of the system in its' current state.
+- **Overall Value Proposition Achievement**:
+  - Overall, it seems that we have achieved streamlining the calendar, streamlining PC reservation, and accessibility of the Advanced Media Lab through our website.
 
 ---
