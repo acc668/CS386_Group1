@@ -1,263 +1,343 @@
 const express = require('express');
 
-//User Login requirements vvv
+// User Login requirements
 const session = require('express-session');
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const bcrypt = require('bcrypt');
 
-//database requirements
-const mysql = require('mysql2');
+// Database requirements
+const mysql = require('mysql2/promise'); // Using promise-based API for better async handling
 
-
+// Create Express app
 const app = express();
 const PORT = 3000;
 
+// Database connection
+let connection;
 
-//MySQL Connection -------------------------------------------------------------
-//NOTE: THE CURRENT INFORMATION IS FOR A *LOCAL* DB
-//      --> This is ONLY going to be used for DEVELOPMENT
-//      --> CHANGE necessary info when CLOUD HOSTING software
-//          is selected
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',  // <-- TEMPORARY
-    password: 'password',  // <-- TEMPORARY
-    database: 'QUp'  // <-- TEMPORARY
-})
-
-connection.connect(err => {
-    if (err) {
+/**
+ * Initialize database connection
+ * @returns {Promise} - Resolves when connection is established
+ */
+async function initializeDatabase() {
+    try {
+        connection = await mysql.createConnection({
+            host: 'localhost',
+            user: 'root',  // <-- TEMPORARY
+            password: 'password',  // <-- TEMPORARY
+            database: 'QUp'  // <-- TEMPORARY
+        });
+        
+        console.log("Successful MySQL Connection!");
+        return connection;
+    } catch (err) {
         console.error('Error connecting to MySQL: ', err);
-        return;
+        throw err;
     }
-    console.log("Successful MySQL Connection!");
-});
-//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-//Database interaction functions
-function addReservation(date, time, user) {
-    connection.execute(
-        'INSERT INTO reservations, '
-    )
 }
 
-
-// Defining Local Strategy For Authentication-----------------------------------
-
-passport.use(new LocalStrategy(async (username, password, done) => {
-    //checking that the user exists
-
+/**
+ * Add a reservation to the database
+ * @param {string} date - The date of the reservation
+ * @param {string} startTime - The start time
+ * @param {string} endTime - The end time
+ * @param {Object} user - The user making the reservation
+ * @returns {Promise} - Resolves with the result of the database operation
+ */
+async function addReservation(date, startTime, endTime, user) {
     try {
-        //QUERYING DATABASE
-       const [results] = await connection.execute(
-        'SELECT id, username, password FROM users WHERE username = ?',
-        [username]
-       )
-       
-        if(results.length == 0) {
-            return done(null, false, {message: "User not found"});
-        }
-       
-        //extract the actual row (id, username, and password) from the resutls
-        //array
-        user = results[0]
+        const result = await connection.execute(
+            'INSERT INTO reservations (id, date, start, end) VALUES (?, ?, ?, ?)',
+            [user.id, date, startTime, endTime]
+        );
+        return result;
+    } catch (err) {
+        console.error("Error adding reservation: ", err);
+        throw err;
+    }
+}
 
-        //checking if the passwords match
-        const isMatch = await bcrypt.compare(password, user.password)
+/**
+ * Register a new user
+ * @param {string} username - The username
+ * @param {string} password - The password (will be hashed)
+ * @returns {Promise} - Resolves when user is registered
+ */
+async function registerUser(username, password) {
+    try {
+        const saltRounds = 10;
+        const hashedPassword = await bcrypt.hash(password, saltRounds);
 
-        if(!isMatch) {
-            //handling invalid password case
-            return done(null, false, {message: "Invalid Password"})
-        }
-        //handling valid password case
-        return done(null, user)
+        await connection.execute(
+            "INSERT INTO users (username, password) VALUES (?, ?)",
+            [username, hashedPassword]
+        );
+        
+        console.log('User Registered Successfully');
+        return { success: true };
     }
     catch(err) {
-        return done(err)
+        console.error("Error registering user: ", err);
+        throw err;
     }
-    
-}))
+}
 
-//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-//Serializing User
-passport.serializeUser((user, done) => {
-    done(null, user.id)
-})
-
-//Deserializing User
-passport.deserializeUser((id, done) => {
-
+/**
+ * Check if a username already exists
+ * @param {string} username - The username to check
+ * @returns {Promise<boolean>} - Resolves with true if user exists
+ */
+async function userExists(username) {
     try {
-        //querying database for user
-        const results = connection.execute(
+        const [results] = await connection.execute(
+            'SELECT id FROM users WHERE username = ?',
+            [username]
+        );
+        
+        return results.length > 0;
+    } catch (err) {
+        console.error("Error checking if user exists: ", err);
+        throw err;
+    }
+}
+
+// Authentication setup
+passport.use(new LocalStrategy(async (username, password, done) => {
+    try {
+        // Query database
+        const [results] = await connection.execute(
+            'SELECT id, username, password FROM users WHERE username = ?',
+            [username]
+        );
+        
+        if(results.length === 0) {
+            return done(null, false, { message: "User not found" });
+        }
+        
+        // Extract user data
+        const user = results[0];
+
+        // Check password
+        const isMatch = await bcrypt.compare(password, user.password);
+
+        if(!isMatch) {
+            return done(null, false, { message: "Invalid Password" });
+        }
+        
+        return done(null, user);
+    }
+    catch(err) {
+        return done(err);
+    }
+}));
+
+// Serializing/Deserializing User
+passport.serializeUser((user, done) => {
+    done(null, user.id);
+});
+
+passport.deserializeUser(async (id, done) => {
+    try {
+        // Query database for user
+        const [results] = await connection.execute(
             'SELECT id, username FROM users WHERE id = ?',
             [id]
         );
 
-        //no user found
         if(results.length === 0) {
-            return done(null, false)
+            return done(null, false);
         }
 
-        //if user found, returning the user object
         return done(null, results[0]);
     }
     catch(err) {
-        done(err)
+        done(err);
     }
+});
 
-})
-
-// Serve static files (HTML, CSS, JS)
+// Middleware setup
 app.use(express.static('public'));
-
-
-//specifying middleware for session management
-app.use(session({ secret: 'secretkey', resave: false, saveUninitialized: false })); 
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(session({ 
+    secret: 'secretkey', 
+    resave: false, 
+    saveUninitialized: false 
+}));
 app.use(passport.initialize());
 app.use(passport.session());
 
-//Authentication middleware
-app.use(express.urlencoded({ extended: false }));
-
-//Custom authentication middleware
+/**
+ * Authentication middleware
+ */
 function isAuth(req, res, next) {
-    //Make sure the user session is valid
-    if (req.isAuthenticated ()) {
+    if (req.isAuthenticated()) {
         return next();
     }
-
-    //if not valid session
-    res.redirect('/login');   //REPLACE WITH POPUP!!
+    res.redirect('/login');
 }
 
+// API Routes
 
-
-//async functions
-async function registerUser(username, password) {
+/**
+ * Route to create a new reservation
+ * Requires authentication
+ */
+app.post("/availability-schedule", isAuth, async (req, res) => {
+    const user = req.user;
     try {
-        const saltRounds = 10
-        const  hashedPassword = await bcrypt.hash(password, saltRounds);
-
-        await connection.execute(
-            "INSERT INTO users (username, password) VALUES (?, ?)",
-            [username, hashedPassword]);
-        
-        console.log('User Registered Successfully')
-    }
-    catch(err) {
-        console.error("Error registering user: ", err)
-    }
-}
-
-
-
-//routes------------------------------------------------------------------------
-
-// //login routes      REFERENCE ROUTES!!
-// app.get("login", (req, res) => {
-//     //serves the login page
-
-//     //THIS MIGHT BE DIFFERENT DUE TO UTLIZATION OF POPUP
-// } )
-
-// app.post("/login", express.urlencoded({extended: false}), (req, res, next) => {
-//     //authenticate the log in attempt
-//     passport.authenticate('local', {
-//         successRedirect: '/reserve',
-//         failureRedirect: '/login',
-//         failureFlash: true
-//     })(req, res, next);
-// })
-
-// //TODO: Make LOGOUT route
-
-// //TODO: reservation routes
-// app.get("/reserve", (req, res) => {
-//     //serve the "Make a Reservation" page, only if the user is logged in
-
-//     passport.authenticate('local', {
-//         successRedirect: '/reserve',
-//         failureRedirect: '/login',
-//         failureFlash: true
-//     })
-
-// })
-
-// app.post("/reserve", express.urlencoded({extended: false}), (req, res, next) =>{
-//     //save the new reservation request in the database
-// })
-
-// //temporary register endpoint for testing of user account creation
-// app.post('/register', async (req, res) => {
-//     const {username, password} = req.body
-//     await registerUser(username, password);
-//     res.send("User Registered!")
-// })
-
-//ACTUAL routes
-
-// --> Reservations
-    //POST request for authentication of the user and for adding a new reservation
-app.post("/availability-schedule", express.urlencoded({extended: false}), isAuth, async (req, res, next) => {
-
-    const user = req.user
-    try {
-        //querying database for user
-        await connection.execute(
-            'INSERT INTO reservations (id, date, start, end) VALUES (?, ?, ?, ?)',
-            [user.id, user.body.date, user.body.startTime, user.body.endTime]
+        await addReservation(
+            req.body.date,
+            req.body.startTime,
+            req.body.endTime,
+            user
         );
-
+        res.status(201).json({ success: true });
     }
     catch(err) {
-        console.error("Reservation Error: ", err)
-        res.status(500).send("Error creating Reservation")
+        console.error("Reservation Error: ", err);
+        res.status(500).send("Error creating Reservation");
     }
-})
-
-
-// --> Account creation
-    //POST request for making a new user
-app.post("/New_Account", express.urlenconded({extended: false}), async (req, res, next)=>{
-    
-    const user = req.body.username
-    const password = req.body.password
-
-    
-    registerUser(username, password)
-})
-
-    //GET request for accessing a user to make sure they don't already exist
-    //before account creation
-app.get("/New_Account", (req, res, next)=>{
-    try {
-        //querying database for user
-        const results = connection.execute(
-            'SELECT id, username FROM users WHERE username = ?',
-            [req.username]
-        );
-
-        //no user found
-        if(results.length === 0) {
-            return done(null, false)
-        }
-
-        //if user found, returning the user object
-        return done(null, results[0]);
-    }
-    catch(err) {
-        done(err)
-    }
-})
-
-
-//- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-
-
-
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+/**
+ * Route to create a new user account
+ */
+app.post("/New_Account", express.urlencoded({ extended: false }), async (req, res) => {
+    try {
+        const { username, password } = req.body;
+        
+        // Check if user already exists
+        const exists = await userExists(username);
+        if (exists) {
+            return res.status(409).json({ 
+                success: false, 
+                message: "Username already exists" 
+            });
+        }
+        
+        // Register the new user
+        await registerUser(username, password);
+        res.status(201).json({ success: true });
+    } catch (err) {
+        console.error("Account creation error: ", err);
+        res.status(500).json({ 
+            success: false, 
+            message: "Error creating account" 
+        });
+    }
+});
+
+/**
+ * Route to check if a username exists
+ */
+app.get("/check-username/:username", async (req, res) => {
+    try {
+        const exists = await userExists(req.params.username);
+        res.json({ exists });
+    } catch (err) {
+        console.error("Username check error: ", err);
+        res.status(500).json({ 
+            success: false, 
+            message: "Error checking username" 
+        });
+    }
+});
+
+/**
+ * Login route
+ */
+app.post("/login", (req, res, next) => {
+    passport.authenticate('local', (err, user, info) => {
+        if (err) {
+            return next(err);
+        }
+        if (!user) {
+            return res.status(401).json({ 
+                success: false, 
+                message: info.message || "Authentication failed" 
+            });
+        }
+        req.login(user, (err) => {
+            if (err) {
+                return next(err);
+            }
+            return res.json({ success: true });
+        });
+    })(req, res, next);
+});
+
+/**
+ * Logout route
+ */
+app.post("/logout", (req, res) => {
+    req.logout((err) => {
+        if (err) {
+            return res.status(500).json({ 
+                success: false, 
+                message: "Error logging out" 
+            });
+        }
+        res.json({ success: true });
+    });
+});
+
+// Server initialization
+let server;
+
+/**
+ * Start the server
+ * @returns {Promise} - Resolves when server is started
+ */
+async function startServer() {
+    try {
+        await initializeDatabase();
+        
+        server = app.listen(PORT, () => {
+            console.log(`Server is running on http://localhost:${PORT}`);
+        });
+        
+        return server;
+    } catch (err) {
+        console.error("Failed to start server: ", err);
+        throw err;
+    }
+}
+
+/**
+ * Stop the server
+ * @returns {Promise} - Resolves when server is stopped
+ */
+async function stopServer() {
+    if (server) {
+        await new Promise((resolve) => {
+            server.close(resolve);
+        });
+    }
+    
+    if (connection) {
+        await connection.end();
+    }
+}
+
+// Start the server if this file is run directly
+if (require.main === module) {
+    startServer().catch(err => {
+        console.error("Server failed to start: ", err);
+        process.exit(1);
+    });
+}
+
+// Export for testing
+module.exports = {
+    app,
+    server,
+    startServer,
+    stopServer,
+    initializeDatabase,
+    addReservation,
+    registerUser,
+    userExists,
+    isAuth
+};
