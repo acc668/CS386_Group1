@@ -10,19 +10,19 @@
 
 Verification aims to ensure that the product has been correctly developed.
 
-- **Test framework used**: <Insert Framework (e.g., Google Test, Catch2, etc.)>
-- **GitHub Test Folder Link**: <Insert Link Here>
+- **Test framework used**: Jest
+- **GitHub Test Folder Link**: <https://github.com/acc668/CS386_Group1/tree/main/Q-upSite/tests>
 
 ### Example Unit Test
 
-<Insert Explanation About Tested Feature Here>
+This verification test ensures that the password hashing for user passwords is being conducted correctly. The database should not store raw passwords due to safety concerns in the event that the database is compromised. Therefore this test aims to verify that the passwords are being encrypted before storing in the database. Unfortunately, due to some compatibility issues between our server file and test cases, the tests returned as Failed, but this is something that is planned to be ironed out in the near future.
 
-- **GitHub Link to Tested Class**: <Insert Link Here>
-- **GitHub Link to Unit Test**: <https://github.com/acc668/CS386_Group1/blob/main/Q-upSite/server.js>
+- **GitHub Link to Tested Class**: <https://github.com/acc668/CS386_Group1/blob/main/Q-upSite/server.js>
+- **GitHub Link to Unit Test**: <https://github.com/acc668/CS386_Group1/blob/main/Q-upSite/tests/serverVerification.test.js>
 
 ### Unit Test Execution Screenshot
 
-<Insert Unit Test Print Screen Here>
+![Verification Test SS](<./images/Verification.png>)
 
 ---
 
@@ -30,18 +30,19 @@ Verification aims to ensure that the product has been correctly developed.
 
 An acceptance test verifies the correct implementation of a feature from the user interface perspective.
 
-- **Test framework used**: <Insert Framework (e.g., Selenium, Cypress, etc.)>
-- **GitHub Acceptance Test Folder Link**: <Insert Link Here>
+- **Test framework used**: Jest
+- **GitHub Acceptance Test Folder Link**: <https://github.com/acc668/CS386_Group1/tree/main/Q-upSite/tests>
 
 ### Example Acceptance Test
 
-<Insert Explanation About Tested Feature Here>
+This acceptance test aims at verifying that users can be created and inserted into the database. This is important because it is a key component in keeping track of the user’s reservations and information. Unfortunately, due to recent database connection issues, the tests returned as Failed, but this is something that will be fixed in the near future.
 
-- **GitHub Link to Acceptance Test**: <Insert Link Here>
+
+- **GitHub Link to Acceptance Test**: <https://github.com/acc668/CS386_Group1/blob/main/Q-upSite/tests/serverAcceptance.test.js>
 
 ### Acceptance Test Execution Screenshot/Video
 
-<Insert Acceptance Test Print Screen or Video Link Here>
+![Acceptance Test SS](<./images/Acceptance.png>)
 
 ---
 
