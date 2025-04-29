@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "node server.js",
     "dev": "nodemon server.js"
   },
@@ -12,9 +12,12 @@
   "license": "GPL",
   "description": "A scheduling web app for the NAU AML",
   "devDependencies": {
-    "nodemon": "^3.1.9"
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.9",
+    "supertest": "^7.1.0"
   },
   "dependencies": {
+    "express": "^5.1.0",
     "mysql2": "^3.13.0"
   }
 }

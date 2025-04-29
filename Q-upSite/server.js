@@ -24,8 +24,8 @@ async function initializeDatabase() {
     try {
         connection = await mysql.createConnection({
             host: 'localhost',
-            user: 'root',  // <-- TEMPORARY
-            password: 'password',  // <-- TEMPORARY
+            user: 'testuser',  // <-- TEMPORARY
+            password: 'testpassword',  // <-- TEMPORARY
             database: 'QUp'  // <-- TEMPORARY
         });
         
@@ -341,3 +341,5 @@ module.exports = {
     userExists,
     isAuth
 };
+
+module.exports = app, registerUser;
